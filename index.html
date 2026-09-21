@@ -108,6 +108,14 @@
             color: #D25299 !important; /* brand-pink */
             text-decoration-color: #D25299 !important;
         }
+
+        /* Auto-striping for sections */
+        section:not(#home):nth-of-type(even) {
+            background-color: #F8FAFC; /* tailwind slate-50 */
+        }
+        section:not(#home):nth-of-type(odd) {
+            background-color: #FFFFFF; /* white */
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-brand-textDark font-sans antialiased selection:bg-brand-pink selection:text-white min-h-screen text-left">
