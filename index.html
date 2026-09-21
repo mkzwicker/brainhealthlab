@@ -315,77 +315,8 @@
                 <div id="cms-news-subtitle" class="text-base text-slate-600 font-medium">Recent updates from our lab and initiatives.</div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
-                <article class="bg-white border border-pink-200 p-6 rounded-2xl shadow-sm flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between text-xs text-slate-500 font-bold mb-3">
-                            <span class="bg-pink-100 text-brand-darkPink px-3 py-1 rounded-2xl">Recruitment</span>
-                            <time datetime="2025-06-15">June 2025</time>
-                        </div>
-                        <h3 class="text-lg md:text-xl font-bold text-slate-900 mb-3">We're Hiring!</h3>
-                        <p class="text-base text-slate-600 leading-relaxed mb-6 font-medium text-left">
-                            The lab is recruiting new trainees and research staff. Check position requirements and stipend details on our Join Us page.
-                        </p>
-                    </div>
-                    <a href="#join-us" class="inline-flex items-center gap-1.5 font-bold text-brand-darkPink hover:text-brand-pink transition-colors">
-                        <span>Read Join Us page</span>
-                        <span class="material-symbols-outlined text-lg">arrow_forward</span>
-                    </a>
-                </article>
-
-                <article class="bg-white border border-pink-200 p-6 rounded-2xl shadow-sm flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between text-xs text-slate-500 font-bold mb-3">
-                            <span class="bg-pink-100 text-brand-darkPink px-3 py-1 rounded-2xl">Participate</span>
-                            <time datetime="2025-04-10">April 2025</time>
-                        </div>
-                        <h3 class="text-lg md:text-xl font-bold text-slate-900 mb-3">Participate in a Study</h3>
-                        <p class="text-base text-slate-600 leading-relaxed mb-6 font-medium text-left">
-                            Looking for participants aged 20-45 for a brief telephone study of memory and executive function to help identify SuperAgers in CLSA.
-                        </p>
-                    </div>
-                    <a href="https://stfx.qualtrics.com/jfe/form/SV_3jXzr3qXpx1KQaa" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 font-bold text-brand-darkPink hover:text-brand-pink transition-colors">
-                        <span>Read Study Details (Qualtrics)</span>
-                        <span class="material-symbols-outlined text-lg">open_in_new</span>
-                    </a>
-                </article>
-
-                <article class="bg-white border border-pink-200 p-6 rounded-2xl shadow-sm flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between text-xs text-slate-500 font-bold mb-3">
-                            <span class="bg-pink-100 text-brand-darkPink px-3 py-1 rounded-2xl">Awards</span>
-                            <time datetime="2025-03-08">March 2025</time>
-                        </div>
-                        <h3 class="text-lg md:text-xl font-bold text-slate-900 mb-3">Congratulations to Lab Members!</h3>
-                        <p class="text-base text-slate-600 leading-relaxed mb-6 font-medium text-left">
-                            Congratulations to Lydia Shaw-Peters and Kate LeBlanc on their successful StFX Summer Research Award applications!
-                        </p>
-                    </div>
-                    <a href="#team" class="inline-flex items-center gap-1.5 font-bold text-brand-darkPink hover:text-brand-pink transition-colors">
-                        <span>Meet Our Award Winners</span>
-                        <span class="material-symbols-outlined text-lg">arrow_forward</span>
-                    </a>
-                </article>
-
-                <article class="bg-white border border-pink-200 p-6 rounded-2xl shadow-sm flex flex-col justify-between lg:col-span-3">
-                    <div>
-                        <div class="flex items-center justify-between text-xs text-slate-500 font-bold mb-3">
-                            <span class="bg-pink-100 text-brand-darkPink px-3 py-1 rounded-2xl">Grants & Welcomes</span>
-                            <time datetime="2024-12-01">Winter 2024</time>
-                        </div>
-                        <h3 class="text-lg md:text-xl font-bold text-slate-900 mb-3">Recent Lab Milestones, Trainees & Grants</h3>
-                        <p class="text-base text-slate-600 leading-relaxed mb-4 font-medium text-left">
-                            Welcomed postdoc Dr. Jason Payne (co-supervised with Dr. Jodie Gawryluk, UVic) and manager Akhil Chaudhary! Also welcomed summer trainees Harmony Bright-Doucette, Luke Gosse, Cole MacDonald, Chloe Oleksiuk, Georgia Polomski, & Amanda Stone.
-                        </p>
-                        <p class="text-base text-slate-600 leading-relaxed mb-6 font-medium text-left">
-                            Grants awarded: AtlanticOER Hackathon grant, StFX SU Cognitive Neuroscience OER grant, MITACS & CLARI housing instability grants with Family Service in Mi'kma'ki, and CIHR VAST Platform funding!
-                        </p>
-                    </div>
-                    <a href="#teaching" class="inline-flex items-center gap-1.5 font-bold text-brand-darkPink hover:text-brand-pink transition-colors">
-                        <span>Explore OER Projects & Grants</span>
-                        <span class="material-symbols-outlined text-lg">arrow_forward</span>
-                    </a>
-                </article>
+            <div id="cms-news-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+                <!-- News items hydrated dynamically from CMS -->
             </div>
         </div>
     </section>
@@ -1292,6 +1223,36 @@
                     if (news.anchor) $('#news').attr('id', news.anchor);
                     if (news.section_title) $('#cms-news-title').text(news.section_title);
                     $('#cms-news-subtitle').html(news.introduction ? marked.parse(news.introduction) : '').toggle(!!news.introduction);
+                    
+                    const container = $('#cms-news-container');
+                    container.empty();
+                    if (news.news_items && news.news_items.length > 0) {
+                        news.news_items.forEach(item => {
+                            const icon = (item.link_target && item.link_target.startsWith('http')) ? 'open_in_new' : 'arrow_forward';
+                            const spanClass = item.span_full ? 'lg:col-span-3' : '';
+                            const articleHtml = `
+                                <article class="bg-white border border-pink-200 p-6 rounded-2xl shadow-sm flex flex-col justify-between ${spanClass}">
+                                    <div>
+                                        <div class="flex items-center justify-between text-xs text-slate-500 font-bold mb-3">
+                                            <span class="bg-pink-100 text-brand-darkPink px-3 py-1 rounded-2xl">${item.category || ''}</span>
+                                            <time datetime="${item.date_iso || ''}">${item.date_text || ''}</time>
+                                        </div>
+                                        <h3 class="text-lg md:text-xl font-bold text-slate-900 mb-3">${item.title || ''}</h3>
+                                        <div class="text-base text-slate-600 leading-relaxed mb-6 font-medium text-left prose prose-slate">
+                                            ${item.content ? marked.parse(item.content) : ''}
+                                        </div>
+                                    </div>
+                                    ${item.link_text ? `
+                                    <a href="${item.link_target || '#'}" ${item.link_target && item.link_target.startsWith('http') ? 'target="_blank" rel="noopener noreferrer"' : ''} class="inline-flex items-center gap-1.5 font-bold text-brand-darkPink hover:text-brand-pink transition-colors">
+                                        <span>${item.link_text}</span>
+                                        <span class="material-symbols-outlined text-lg">${icon}</span>
+                                    </a>
+                                    ` : ''}
+                                </article>
+                            `;
+                            container.append(articleHtml);
+                        });
+                    }
                 }
                 
                 // Publications

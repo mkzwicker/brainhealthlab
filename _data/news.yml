@@ -1,3 +1,36 @@
-anchor: news
-section_title: News
-introduction: Remove this field
+anchor: "news"
+section_title: "News"
+introduction: "Recent updates from our lab and initiatives."
+news_items:
+  - category: "Recruitment"
+    date_text: "June 2025"
+    date_iso: "2025-06-15"
+    title: "We're Hiring!"
+    content: "The lab is recruiting new trainees and research staff. Check position requirements and stipend details on our Join Us page."
+    link_text: "Read Join Us page"
+    link_target: "#join-us"
+    span_full: false
+  - category: "Participate"
+    date_text: "April 2025"
+    date_iso: "2025-04-10"
+    title: "Participate in a Study"
+    content: "Looking for participants aged 20-45 for a brief telephone study of memory and executive function to help identify SuperAgers in CLSA."
+    link_text: "Read Study Details (Qualtrics)"
+    link_target: "https://stfx.qualtrics.com/jfe/form/SV_3jXzr3qXpx1KQaa"
+    span_full: false
+  - category: "Awards"
+    date_text: "March 2025"
+    date_iso: "2025-03-08"
+    title: "Congratulations to Lab Members!"
+    content: "Congratulations to Lydia Shaw-Peters and Kate LeBlanc on their successful StFX Summer Research Award applications!"
+    link_text: "Meet Our Award Winners"
+    link_target: "#team"
+    span_full: false
+  - category: "Grants & Welcomes"
+    date_text: "Winter 2024"
+    date_iso: "2024-12-01"
+    title: "Recent Lab Milestones, Trainees & Grants"
+    content: "Welcomed postdoc Dr. Jason Payne (co-supervised with Dr. Jodie Gawryluk, UVic) and manager Akhil Chaudhary! Also welcomed summer trainees Harmony Bright-Doucette, Luke Gosse, Cole MacDonald, Chloe Oleksiuk, Georgia Polomski, & Amanda Stone.\n\nGrants awarded: AtlanticOER Hackathon grant, StFX SU Cognitive Neuroscience OER grant, MITACS & CLARI housing instability grants with Family Service in Mi'kma'ki, and CIHR VAST Platform funding!"
+    link_text: "Explore OER Projects & Grants"
+    link_target: "#teaching"
+    span_full: true

@@ -99,6 +99,18 @@ collections:
           - { label: "Anchor Name", name: "anchor", widget: "string", hint: "e.g. news" }
           - { label: "Title", name: "section_title", widget: "string" }
           - { label: "Introduction", name: "introduction", widget: "markdown", required: false }
+          - label: "News Items"
+            name: "news_items"
+            widget: "list"
+            fields:
+              - { label: "Category", name: "category", widget: "string" }
+              - { label: "Date (Text)", name: "date_text", widget: "string" }
+              - { label: "Date (ISO)", name: "date_iso", widget: "string", hint: "e.g. 2025-06-15" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Content", name: "content", widget: "markdown" }
+              - { label: "Link Text", name: "link_text", widget: "string" }
+              - { label: "Link Target", name: "link_target", widget: "string" }
+              - { label: "Span Full Width", name: "span_full", widget: "boolean", default: false }
 
   - name: "teaching"
     label: "Teaching"
