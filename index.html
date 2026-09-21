@@ -199,15 +199,15 @@
                     </div>
 
                     <div class="flex flex-wrap items-center justify-start gap-3">
-                        <a href="#news" class="w-full sm:w-auto bg-brand-pink hover:bg-brand-darkPink text-white font-bold px-6 py-3 rounded-2xl shadow-lg shadow-pink-200 transition-all flex items-center justify-center gap-2 text-sm">
+                        <a href="#news" class="inline-flex items-center justify-center gap-2 bg-brand-pink hover:bg-brand-darkPink text-white font-bold px-5 py-2.5 rounded-xl shadow-sm hover:shadow-md transition-all text-sm w-full sm:w-auto text-center shrink-0">
                             <span class="material-symbols-outlined text-lg">newspaper</span>
                             <span>Latest News</span>
                         </a>
-                        <a href="#publications" class="w-full sm:w-auto bg-brand-pink hover:bg-brand-darkPink text-white font-bold px-6 py-3 rounded-2xl shadow-lg shadow-pink-200 transition-all flex items-center justify-center gap-2 text-sm">
+                        <a href="#publications" class="inline-flex items-center justify-center gap-2 bg-brand-pink hover:bg-brand-darkPink text-white font-bold px-5 py-2.5 rounded-xl shadow-sm hover:shadow-md transition-all text-sm w-full sm:w-auto text-center shrink-0">
                             <span class="material-symbols-outlined text-lg">menu_book</span>
                             <span>Our Publications</span>
                         </a>
-                        <a href="#join-us" class="w-full sm:w-auto bg-brand-pink hover:bg-brand-darkPink text-white font-bold px-6 py-3 rounded-2xl shadow-lg shadow-pink-200 transition-all flex items-center justify-center gap-2 text-sm">
+                        <a href="#join-us" class="inline-flex items-center justify-center gap-2 bg-brand-pink hover:bg-brand-darkPink text-white font-bold px-5 py-2.5 rounded-xl shadow-sm hover:shadow-md transition-all text-sm w-full sm:w-auto text-center shrink-0">
                             <span class="material-symbols-outlined text-lg">group_add</span>
                             <span>Join The Lab</span>
                         </a>
@@ -216,7 +216,7 @@
 
                 <!-- Hero Featured Initiatives Carousel -->
                 <div class="lg:col-span-5">
-                    <div class="bg-white border-2 border-pink-200 p-8 rounded-2xl shadow-xl relative text-left h-[360px] sm:h-[340px] flex flex-col justify-between overflow-hidden" aria-roledescription="carousel" aria-label="Featured Lab Initiatives">
+                    <div class="bg-white border border-pink-200 p-8 rounded-2xl shadow-md hover:border-brand-pink hover:shadow-lg transition-all relative text-left h-[360px] sm:h-[340px] flex flex-col justify-between overflow-hidden" aria-roledescription="carousel" aria-label="Featured Lab Initiatives">
                         <!-- Top Gradient Accent Banner (Enhancement 3) -->
                         <div class="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-brand-pink via-pink-400 to-brand-darkPink"></div>
 
@@ -288,7 +288,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-16 md:py-24 border-b border-slate-200/80 bg-white text-left">
+    <section id="about" class="py-16 md:py-24 border-b border-pink-200/50 text-left">
         <div class="max-w-7xl mx-auto px-6">
             <div class="max-w-3xl mb-16 text-left">
                 <h2 id="cms-about-title" class="text-2xl md:text-3xl font-extrabold text-slate-900 mb-4">Research Areas</h2>
@@ -304,7 +304,7 @@
     </section>
 
     <!-- News Section -->
-    <section id="news" class="py-16 md:py-24 border-b border-slate-200/80 bg-slate-50 text-left">
+    <section id="news" class="py-16 md:py-24 border-b border-pink-200/50 text-left">
         <div class="max-w-7xl mx-auto px-6">
             <div class="mb-12 text-left">
                 <h2 id="cms-news-title" class="text-2xl md:text-3xl font-extrabold text-slate-900 mb-2">News</h2>
@@ -318,7 +318,7 @@
     </section>
 
     <!-- Publications Section -->
-    <section id="publications" class="py-16 md:py-24 border-b border-slate-200/80 bg-white text-left">
+    <section id="publications" class="py-16 md:py-24 border-b border-pink-200/50 text-left">
         <div class="max-w-7xl mx-auto px-6">
             <div class="max-w-3xl mb-12 text-left">
                 <h2 id="cms-publications-title" class="text-2xl md:text-3xl font-extrabold text-slate-900">Publications and Presentations</h2>
@@ -362,7 +362,7 @@
 
     <!-- Handlebars Templates for Publications -->
     <script id="review-template" type="text/x-handlebars-template">
-        <div class="bg-brand-bgLight border border-pink-200 p-6 rounded-2xl shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4 text-left">
+        <div class="bg-white border border-pink-200 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-md hover:border-brand-pink transition-all flex flex-col md:flex-row md:items-center justify-between gap-4 text-left">
             <div class="text-left max-w-4xl">
                 {{#if cells.Link}}
                 <a href="{{cells.Link}}" target="_blank" rel="noopener noreferrer" class="text-lg font-bold text-slate-900 hover:text-brand-pink transition-colors">{{cells.Title}}</a>
@@ -378,7 +378,7 @@
             </div>
             {{#if cells.Download}}
             <div class="shrink-0">
-                <a href="{{cells.Download}}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-brand-pink hover:bg-brand-darkPink text-white text-xs font-bold px-4 py-2 rounded-xl transition-all">
+                <a href="{{cells.Download}}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-brand-pink hover:bg-brand-darkPink text-white text-xs font-bold px-5 py-2.5 rounded-xl transition-all">
                     <span>View</span>
                     <span class="material-symbols-outlined text-sm">open_in_new</span>
                 </a>
@@ -388,7 +388,7 @@
     </script>
 
     <script id="research-template" type="text/x-handlebars-template">
-        <div class="bg-brand-bgLight border border-pink-200 p-6 rounded-2xl shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4 text-left">
+        <div class="bg-white border border-pink-200 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-md hover:border-brand-pink transition-all flex flex-col md:flex-row md:items-center justify-between gap-4 text-left">
             <div class="text-left max-w-4xl">
                 {{#if cells.Link}}
                 <a href="{{cells.Link}}" target="_blank" rel="noopener noreferrer" class="text-lg font-bold text-slate-900 hover:text-brand-pink transition-colors">{{cells.Title}}</a>
@@ -404,7 +404,7 @@
             </div>
             {{#if cells.Download}}
             <div class="shrink-0">
-                <a href="{{cells.Download}}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-brand-pink hover:bg-brand-darkPink text-white text-xs font-bold px-4 py-2 rounded-xl transition-all">
+                <a href="{{cells.Download}}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-brand-pink hover:bg-brand-darkPink text-white text-xs font-bold px-5 py-2.5 rounded-xl transition-all">
                     <span>View</span>
                     <span class="material-symbols-outlined text-sm">open_in_new</span>
                 </a>
@@ -414,7 +414,7 @@
     </script>
 
     <script id="presentations-template" type="text/x-handlebars-template">
-        <div class="bg-brand-bgLight border border-pink-200 p-6 rounded-2xl shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4 text-left">
+        <div class="bg-white border border-pink-200 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-md hover:border-brand-pink transition-all flex flex-col md:flex-row md:items-center justify-between gap-4 text-left">
             <div class="text-left max-w-4xl">
                 {{#if cells.Link}}
                 <a href="{{cells.Link}}" target="_blank" rel="noopener noreferrer" class="text-lg font-bold text-slate-900 hover:text-brand-pink transition-colors">{{cells.Title}}</a>
@@ -430,7 +430,7 @@
             </div>
             {{#if cells.Download}}
             <div class="shrink-0">
-                <a href="{{cells.Download}}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-brand-pink hover:bg-brand-darkPink text-white text-xs font-bold px-4 py-2 rounded-xl transition-all">
+                <a href="{{cells.Download}}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-brand-pink hover:bg-brand-darkPink text-white text-xs font-bold px-5 py-2.5 rounded-xl transition-all">
                     <span>View</span>
                     <span class="material-symbols-outlined text-sm">open_in_new</span>
                 </a>
@@ -440,7 +440,7 @@
     </script>
 
     <!-- Our Team Section -->
-    <section id="team" class="py-16 md:py-24 border-b border-slate-200/80 bg-slate-50 text-left">
+    <section id="team" class="py-16 md:py-24 border-b border-pink-200/50 text-left">
         <div class="max-w-7xl mx-auto px-6">
             <div class="max-w-3xl mb-12 text-left">
                 <h2 id="cms-team-title" class="text-2xl md:text-3xl font-extrabold text-slate-900 mb-4">Our Team</h2>
@@ -448,7 +448,7 @@
             </div>
 
             <!-- PI Card -->
-            <div id="pi-profile" class="bg-white border-2 border-pink-200 p-8 md:p-10 rounded-2xl shadow-lg mb-12 text-left scroll-mt-28">
+            <div id="pi-profile" class="bg-white border border-pink-200 p-8 md:p-10 rounded-2xl shadow-md hover:shadow-lg hover:border-brand-pink transition-all mb-12 text-left scroll-mt-28">
                 <div class="flex flex-col sm:flex-row items-start gap-6 lg:gap-8 text-left">
                     <div class="w-64 h-64 sm:w-64 sm:h-64 md:w-72 md:h-72 rounded-2xl overflow-hidden border-2 border-pink-200 shadow-2xl bg-pink-50 shrink-0">
                         <img src="https://lh3.googleusercontent.com/d/1EE-vFiKmU0Tm-xyD7Q_y5wnA8CTYzI3_" alt="Dr. Erin Mazerolle" class="w-full h-full object-cover">
@@ -464,7 +464,7 @@
                                     <span>emazerol@stfx.ca</span>
                                 </a>
                             </div>
-                            <a href="https://www.erinmazerolle.com/Mazerolle_CV_web.pdf" target="_blank" rel="noopener noreferrer" id="download-cv-btn" class="inline-flex items-center gap-2 bg-brand-pink hover:bg-brand-darkPink text-white font-bold px-4 py-2 rounded-2xl shadow-md transition-all text-sm shrink-0">
+                            <a href="https://www.erinmazerolle.com/Mazerolle_CV_web.pdf" target="_blank" rel="noopener noreferrer" id="download-cv-btn" class="inline-flex items-center justify-center gap-2 bg-brand-pink hover:bg-brand-darkPink text-white font-bold px-5 py-2.5 rounded-xl shadow-sm hover:shadow-md transition-all text-sm w-full sm:w-auto text-center shrink-0">
                                 <span class="material-symbols-outlined text-base">download</span>
                                 <span>Download Full CV</span>
                             </a>
@@ -505,7 +505,7 @@
 
     <!-- Handlebars Templates for Team Members (Matching Partner Cards Style) -->
     <script id="current-template" type="text/x-handlebars-template">
-        <div class="bg-white border border-pink-200 p-6 rounded-2xl shadow-sm hover:border-brand-pink transition-all text-left flex flex-col justify-between">
+        <div class="bg-white border border-pink-200 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-md hover:border-brand-pink transition-all text-left flex flex-col justify-between">
             <div>
                 <h3 class="text-lg font-extrabold text-slate-900 mb-1">{{cells.Name}}</h3>
                 <p class="text-sm font-bold text-brand-pink mb-2">{{cells.Position}}</p>
@@ -517,7 +517,7 @@
     </script>
 
     <script id="former-template" type="text/x-handlebars-template">
-        <div class="bg-white border border-pink-200 p-6 rounded-2xl shadow-sm hover:border-brand-pink transition-all text-left flex flex-col justify-between">
+        <div class="bg-white border border-pink-200 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-md hover:border-brand-pink transition-all text-left flex flex-col justify-between">
             <div>
                 <h3 class="text-lg font-extrabold text-slate-900 mb-1">{{cells.Name}}</h3>
                 <p class="text-sm font-bold text-brand-pink mb-2">{{cells.Position}}</p>
@@ -529,7 +529,7 @@
     </script>
 
     <!-- Teaching Section -->
-    <section id="teaching" class="py-16 md:py-24 border-b border-slate-200/80 bg-white text-left">
+    <section id="teaching" class="py-16 md:py-24 border-b border-pink-200/50 text-left">
         <div class="max-w-7xl mx-auto px-6">
             <div class="max-w-3xl mb-12 text-left">
                 <h2 id="cms-teaching-title" class="text-2xl md:text-3xl font-extrabold text-slate-900">Teaching</h2>
@@ -559,7 +559,7 @@
 
                 <!-- Tab Panel 1: Statistics OERs -->
                 <div id="teach-panel-stats" class="teach-panel active">
-                    <div class="bg-brand-bgLight border-2 border-pink-200 p-8 md:p-10 rounded-2xl shadow-sm text-left">
+                    <div class="bg-white border border-pink-200 p-8 md:p-10 rounded-2xl shadow-md hover:shadow-lg hover:border-brand-pink transition-all text-left">
                         <h3 class="text-xl font-extrabold text-slate-900 mb-4">Open Educational Resources (OERs): Statistics</h3>
                         <ul class="space-y-4 text-base text-slate-700 font-medium text-left max-w-4xl">
                             <li>
@@ -601,7 +601,7 @@
 
                 <!-- Tab Panel 2: MRI & Neuroscience OERs -->
                 <div id="teach-panel-mri" class="teach-panel hidden">
-                    <div class="bg-brand-bgLight border-2 border-pink-200 p-8 md:p-10 rounded-2xl shadow-sm text-left">
+                    <div class="bg-white border border-pink-200 p-8 md:p-10 rounded-2xl shadow-md hover:shadow-lg hover:border-brand-pink transition-all text-left">
                         <h3 class="text-xl font-extrabold text-slate-900 mb-4">Open Educational Resources (OERs): MRI & Neuroscience</h3>
                         <ul class="space-y-4 text-base text-slate-700 font-medium text-left max-w-4xl">
                             <li>
@@ -628,7 +628,7 @@
 
                 <!-- Tab Panel 3: Inclusion and Accessibility -->
                 <div id="teach-panel-inclusion" class="teach-panel hidden">
-                    <div class="bg-brand-bgLight border-2 border-pink-200 p-8 md:p-10 rounded-2xl shadow-sm text-left">
+                    <div class="bg-white border border-pink-200 p-8 md:p-10 rounded-2xl shadow-md hover:shadow-lg hover:border-brand-pink transition-all text-left">
                         <h3 class="text-xl font-extrabold text-slate-900 mb-4">Inclusion and Accessibility</h3>
                         <ul class="space-y-4 text-base text-slate-700 font-medium text-left max-w-4xl">
                             <li>
@@ -643,7 +643,7 @@
 
                 <!-- Tab Panel 4: STEM Outreach Highlights -->
                 <div id="teach-panel-outreach" class="teach-panel hidden">
-                    <div class="bg-brand-bgLight border-2 border-pink-200 p-8 md:p-10 rounded-2xl shadow-sm text-left">
+                    <div class="bg-white border border-pink-200 p-8 md:p-10 rounded-2xl shadow-md hover:shadow-lg hover:border-brand-pink transition-all text-left">
                         <h3 class="text-xl font-extrabold text-slate-900 mb-4">STEM Outreach Highlights</h3>
                         <p class="text-sm text-slate-600 font-medium mb-4">Erin enjoys working with multiple not-for-profit and university-based organizations that promote science and technology to youth:</p>
                         <ul class="space-y-4 text-sm text-slate-700 font-medium text-left max-w-4xl">
@@ -715,7 +715,7 @@
     </script>
 
     <!-- Partners Section -->
-    <section id="partners" class="py-16 md:py-24 border-b border-slate-200/80 bg-slate-50 text-left">
+    <section id="partners" class="py-16 md:py-24 border-b border-pink-200/50 text-left">
         <div class="max-w-7xl mx-auto px-6 text-left">
             <div class="max-w-3xl mb-12 text-left">
                 <h2 id="cms-partners-title" class="text-2xl md:text-3xl font-extrabold text-slate-900 mb-4">Partners</h2>
@@ -727,7 +727,7 @@
     </section>
 
     <!-- Dedicated Supporters Section -->
-    <section id="supporters" class="py-16 md:py-24 border-b border-slate-200/80 bg-white text-left">
+    <section id="supporters" class="py-16 md:py-24 border-b border-pink-200/50 text-left">
         <div class="max-w-7xl mx-auto px-6 text-left">
             <div class="max-w-3xl mb-12 text-left">
                 <h2 id="cms-supporters-title" class="text-2xl md:text-3xl font-extrabold text-slate-900 mb-4">Supporters</h2>
@@ -741,7 +741,7 @@
     </section>
 
     <!-- Join Us Section -->
-    <section id="join-us" class="py-16 md:py-24 border-b border-slate-200/80 bg-white text-left">
+    <section id="join-us" class="py-16 md:py-24 border-b border-pink-200/50 text-left">
         <div class="max-w-7xl mx-auto px-6">
             <div class="max-w-3xl mb-16 text-left">
                 <h2 id="cms-opportunities-title" class="text-2xl md:text-3xl font-extrabold text-slate-900 mb-4">Join Us!</h2>
@@ -750,7 +750,7 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 text-left">
                 <!-- Graduate Students Card -->
-                <div class="bg-brand-bgLight border-2 border-pink-200 p-8 rounded-2xl shadow-sm text-left flex flex-col justify-between">
+                <div class="bg-white border border-pink-200 p-8 md:p-10 rounded-2xl shadow-md hover:shadow-lg hover:border-brand-pink transition-all text-left flex flex-col justify-between">
                     <div>
                         <div class="flex items-center justify-between gap-4 mb-4">
                             <h3 class="text-xl font-extrabold text-slate-900 text-left">Prospective Graduate Students</h3>
@@ -766,7 +766,7 @@
                         </p>
                     </div>
                     <div class="flex justify-end pt-4">
-                        <a href="#footer-contact" class="inline-flex items-center gap-2 bg-brand-pink hover:bg-brand-darkPink text-white font-bold px-5 py-3 rounded-2xl transition-all shadow-md shadow-pink-200">
+                        <a href="#footer-contact" class="inline-flex items-center justify-center gap-2 bg-brand-pink hover:bg-brand-darkPink text-white font-bold px-5 py-2.5 rounded-xl shadow-sm hover:shadow-md transition-all text-sm w-full sm:w-auto text-center shrink-0">
                             <span>Inquire About Graduate Stipends</span>
                             <span class="material-symbols-outlined text-lg">arrow_forward</span>
                         </a>
@@ -774,7 +774,7 @@
                 </div>
 
                 <!-- Honours Students Card -->
-                <div class="bg-brand-bgLight border-2 border-pink-200 p-8 rounded-2xl shadow-sm text-left flex flex-col justify-between">
+                <div class="bg-white border border-pink-200 p-8 md:p-10 rounded-2xl shadow-md hover:shadow-lg hover:border-brand-pink transition-all text-left flex flex-col justify-between">
                     <div>
                         <div class="flex items-center justify-between gap-4 mb-4">
                             <h3 class="text-xl font-extrabold text-slate-900 text-left">Prospective Honours Students</h3>
@@ -793,7 +793,7 @@
                         </div>
                     </div>
                     <div class="flex justify-end pt-4">
-                        <a href="#footer-contact" class="inline-flex items-center gap-2 bg-brand-pink hover:bg-brand-darkPink text-white font-bold px-5 py-3 rounded-2xl transition-all shadow-md shadow-pink-200">
+                        <a href="#footer-contact" class="inline-flex items-center justify-center gap-2 bg-brand-pink hover:bg-brand-darkPink text-white font-bold px-5 py-2.5 rounded-xl shadow-sm hover:shadow-md transition-all text-sm w-full sm:w-auto text-center shrink-0">
                             <span>Apply For Honours Supervision</span>
                             <span class="material-symbols-outlined text-lg">arrow_forward</span>
                         </a>
@@ -1188,7 +1188,7 @@
                     if (about.research_areas && about.research_areas.length > 0) {
                         about.research_areas.forEach(area => {
                             aboutCards.append(`
-                                <div class="bg-brand-bgLight border border-pink-200 p-8 rounded-2xl shadow-sm hover:shadow-md transition-all">
+                                <div class="bg-white border border-pink-200 p-8 rounded-2xl shadow-sm hover:shadow-md hover:border-brand-pink transition-all">
                                     <h3 class="text-lg md:text-xl font-bold text-slate-900 mb-3">${area.title || ''}</h3>
                                     <div class="text-base text-slate-600 leading-relaxed font-medium text-left prose prose-slate">
                                         ${area.description ? marked.parse(area.description) : ''}
@@ -1213,7 +1213,7 @@
                             const icon = (item.link_target && item.link_target.startsWith('http')) ? 'open_in_new' : 'arrow_forward';
                             const spanClass = item.span_full ? 'lg:col-span-3' : '';
                             const articleHtml = `
-                                <article class="bg-white border border-pink-200 p-6 rounded-2xl shadow-sm flex flex-col justify-between ${spanClass}">
+                                <article class="bg-white border border-pink-200 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-md hover:border-brand-pink transition-all flex flex-col justify-between ${spanClass}">
                                     <div>
                                         <div class="flex items-center justify-between text-xs text-slate-500 font-bold mb-3">
                                             <span class="bg-pink-100 text-brand-darkPink px-3 py-1 rounded-2xl">${item.category || ''}</span>
