@@ -1167,7 +1167,6 @@
                     if (about.anchor) $('#about').attr('id', about.anchor);
                     if (about.section_title) $('#cms-about-title').text(about.section_title);
                     $('#cms-about-subtitle').html(about.introduction ? marked.parse(about.introduction) : '').toggle(!!about.introduction);
-                    if (about.pi_bio) $('#cms-pi-bio').html(marked.parse(about.pi_bio));
                     
                     const aboutCards = $('#cms-about-cards');
                     aboutCards.empty();
@@ -1237,6 +1236,9 @@
                     if (team.anchor) $('#team').attr('id', team.anchor);
                     if (team.section_title) $('#cms-team-title').text(team.section_title);
                     $('#cms-team-intro').html(team.introduction ? marked.parse(team.introduction) : '').toggle(!!team.introduction);
+                    if (team.pi_bio) $('#cms-pi-bio').html(marked.parse(team.pi_bio));
+                    if (team.cv_button_label) $('#download-cv-btn span:last-child').text(team.cv_button_label);
+                    if (team.cv_button_url) $('#download-cv-btn').attr('href', team.cv_button_url);
                 }
                 
                 // Teaching

@@ -63,7 +63,6 @@ collections:
           - { label: "Anchor Name", name: "anchor", widget: "string", hint: "e.g. about" }
           - { label: "Title", name: "section_title", widget: "string" }
           - { label: "Introduction", name: "introduction", widget: "markdown", required: false }
-          - { label: "PI Bio", name: "pi_bio", widget: "markdown", required: false }
           - label: "Research Areas"
             name: "research_areas"
             widget: "list"
@@ -81,6 +80,9 @@ collections:
           - { label: "Anchor Name", name: "anchor", widget: "string", hint: "e.g. team" }
           - { label: "Title", name: "section_title", widget: "string" }
           - { label: "Introduction", name: "introduction", widget: "markdown", required: false }
+          - { label: "PI Bio", name: "pi_bio", widget: "markdown", required: false }
+          - { label: "CV Button Label", name: "cv_button_label", widget: "string", required: false, default: "Download Full CV" }
+          - { label: "CV File URL", name: "cv_button_url", widget: "string", required: false, hint: "Link to the CV PDF" }
           - { label: "Instructions", name: "instructions", widget: "markdown", default: "To manage Team Members, please edit the [Team Spreadsheet](https://docs.google.com/spreadsheets/d/1hYRIFo5c8reL_e77cofdUBV7eoxFB59P_xxUwWgwRAc/edit#gid=0). Changes will be reflected automatically on the site.", required: false }
 
   - name: "publications"
