@@ -39,8 +39,8 @@ collections:
         fields:
           - { label: "Headline Text", name: "headline_text", widget: "string" }
           - { label: "Headline Accent", name: "headline_accent", widget: "string" }
-          - { label: "Subtitle Line 1", name: "subtitle_p1", widget: "markdown" }
-          - { label: "Subtitle Line 2", name: "subtitle_p2", widget: "markdown" }
+          - { label: "Subtitle Line 1", name: "subtitle_p1", widget: "markdown", required: false }
+          - { label: "Subtitle Line 2", name: "subtitle_p2", widget: "markdown", required: false }
 
   - name: "carousel"
     label: "Featured Carousel"
@@ -63,7 +63,7 @@ collections:
           - { label: "Anchor Name", name: "anchor", widget: "string", hint: "e.g. about" }
           - { label: "Title", name: "section_title", widget: "string" }
           - { label: "Introduction", name: "introduction", widget: "markdown", required: false }
-          - { label: "PI Bio", name: "pi_bio", widget: "markdown" }
+          - { label: "PI Bio", name: "pi_bio", widget: "markdown", required: false }
 
   - name: "team"
     label: "Team"
