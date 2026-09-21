@@ -142,5 +142,5 @@ collections:
         name: "footer"
         fields:
           - { label: "Footer Note", name: "footer_note", widget: "string", default: "Brain Health Lab @ St. Francis Xavier University" }
-          - { label: "Address", name: "address", widget: "text" },
+          - { label: "Address", name: "address", widget: "text" }
           - { label: "Copyright Year", name: "copyright_year", widget: "string", default: "2026" }
