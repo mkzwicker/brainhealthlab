@@ -1,10 +1,8 @@
-local_backend: true
-
 backend:
   name: github
   repo: mkzwicker/brainhealthlab
   branch: main
-
+local_backend: true
 media_folder: "media"
 public_folder: "media"
 
@@ -13,134 +11,151 @@ collections:
     label: "Settings"
     files:
       - file: "_data/settings.yml"
-        label: "Site Settings & Branding"
+        label: "Site Settings"
         name: "settings"
         fields:
-          - { label: "Lab Title", name: "lab_title", widget: "string", default: "Brain Health Lab" }
-          - { label: "Institution Name", name: "institution", widget: "string", default: "St. Francis Xavier University" }
-          - { label: "General Contact Email", name: "contact_email", widget: "string", default: "brainhealthlab@stfx.ca" }
-          - { label: "Dr. Mazerolle Personal Email", name: "pi_email", widget: "string", default: "emazerol@stfx.ca" }
-          - { label: "Instagram URL", name: "instagram_url", widget: "string", default: "https://www.instagram.com/brainhealthlab_stfx/" }
-          - { label: "GitHub URL", name: "github_url", widget: "string", default: "https://github.com/brainhealthlabstfx" }
+          - { label: "Website Title", name: "website_title", widget: "string", default: "Brain Health Lab" }
+          - { label: "Lab Title", name: "lab_title", widget: "string" }
+          - { label: "Institution", name: "institution", widget: "string" }
+
+  - name: "navigation"
+    label: "Navigation"
+    files:
+      - file: "_data/navigation.yml"
+        label: "Navigation Links"
+        name: "navigation"
+        fields:
+          - { label: "Links", name: "links", widget: "list", fields: [
+              { label: "Label", name: "label", widget: "string" },
+              { label: "Anchor Target", name: "target", widget: "string", hint: "e.g. #about" }
+            ]}
 
   - name: "home_banner"
-    label: "Home/Banner"
+    label: "Home / Banner"
     files:
       - file: "_data/home_banner.yml"
-        label: "Hero Section Content"
+        label: "Home Banner Content"
         name: "home_banner"
         fields:
-          - { label: "Headline Main Text", name: "headline_text", widget: "string", default: "Interdisciplinary Neuroscience &" }
-          - { label: "Headline Accent Text (Pink)", name: "headline_accent", widget: "string", default: "Brain Health Research" }
-          - { label: "Subtitle Paragraph 1", name: "subtitle_p1", widget: "text" }
-          - { label: "Subtitle Paragraph 2", name: "subtitle_p2", widget: "text" }
-          - { label: "Featured Initiatives Carousel", name: "featured_initiatives", widget: "list", fields: [
-              { label: "Initiative Title", name: "title", widget: "string" },
-              { label: "Description", name: "description", widget: "text" },
-              { label: "Link Button Text", name: "link_text", widget: "string" },
-              { label: "Link URL", name: "link_url", widget: "string" }
-            ]}
+          - { label: "Headline Text", name: "headline_text", widget: "string" }
+          - { label: "Headline Accent", name: "headline_accent", widget: "string" }
+          - { label: "Subtitle Line 1", name: "subtitle_p1", widget: "markdown" }
+          - { label: "Subtitle Line 2", name: "subtitle_p2", widget: "markdown" }
+
+  - name: "carousel"
+    label: "Featured Carousel"
+    files:
+      - file: "_data/carousel.yml"
+        label: "Featured Carousel"
+        name: "carousel"
+        fields:
+          - { label: "Anchor Name", name: "anchor", widget: "string", hint: "e.g. carousel", required: false }
+          - { label: "Title", name: "section_title", widget: "string" }
+          - { label: "Introduction", name: "introduction", widget: "markdown" }
 
   - name: "about"
     label: "About"
     files:
       - file: "_data/about.yml"
-        label: "About & Research Areas"
+        label: "About the Lab"
         name: "about"
         fields:
-          - { label: "Section Title", name: "section_title", widget: "string", default: "Research Areas" }
-          - { label: "Section Subtitle", name: "section_subtitle", widget: "text" }
-          - { label: "Research Areas Cards", name: "research_areas", widget: "list", fields: [
-              { label: "Card Title", name: "title", widget: "string" },
-              { label: "Card Description", name: "description", widget: "text" }
-            ]}
+          - { label: "Anchor Name", name: "anchor", widget: "string", hint: "e.g. about" }
+          - { label: "Title", name: "section_title", widget: "string" }
+          - { label: "Introduction", name: "introduction", widget: "markdown" }
+          - { label: "PI Bio", name: "pi_bio", widget: "markdown" }
+
+  - name: "team"
+    label: "Team"
+    files:
+      - file: "_data/team.yml"
+        label: "Team Instructions"
+        name: "team"
+        fields:
+          - { label: "Anchor Name", name: "anchor", widget: "string", hint: "e.g. team" }
+          - { label: "Title", name: "section_title", widget: "string" }
+          - { label: "Introduction", name: "introduction", widget: "markdown" }
+          - { label: "Instructions", name: "instructions", widget: "markdown", default: "To manage Team Members, please edit the [Team Spreadsheet](https://docs.google.com/spreadsheets/d/1hYRIFo5c8reL_e77cofdUBV7eoxFB59P_xxUwWgwRAc/edit#gid=0). Changes will be reflected automatically on the site.", required: false }
+
+  - name: "publications"
+    label: "Publications"
+    files:
+      - file: "_data/publications.yml"
+        label: "Publications Instructions"
+        name: "publications"
+        fields:
+          - { label: "Anchor Name", name: "anchor", widget: "string", hint: "e.g. publications" }
+          - { label: "Title", name: "section_title", widget: "string" }
+          - { label: "Introduction", name: "introduction", widget: "markdown" }
+          - { label: "Instructions", name: "instructions", widget: "markdown", default: "To manage Publications, please edit the [Publications Spreadsheet](https://docs.google.com/spreadsheets/d/1mkqwHbvnQgFHCbQjc1pUIXd6v9UuJo5_tbm7Fr2PSYk/edit#gid=0). Changes will be reflected automatically on the site.", required: false }
 
   - name: "news"
     label: "News"
     files:
       - file: "_data/news.yml"
-        label: "News Articles & Updates"
+        label: "News"
         name: "news"
         fields:
-          - { label: "Section Title", name: "section_title", widget: "string", default: "News" }
-          - { label: "Section Subtitle", name: "news_subtitle", widget: "string", default: "Recent updates from our lab and initiatives." }
-          - { label: "News Articles", name: "news_items", widget: "list", fields: [
-              { label: "Category Badge", name: "category", widget: "string", default: "Update" },
-              { label: "Date", name: "date", widget: "string" },
-              { label: "Headline", name: "title", widget: "string" },
-              { label: "Article Summary", name: "description", widget: "text" },
-              { label: "Link Text", name: "link_text", widget: "string" },
-              { label: "Link URL", name: "link_url", widget: "string" }
-            ]}
+          - { label: "Anchor Name", name: "anchor", widget: "string", hint: "e.g. news" }
+          - { label: "Title", name: "section_title", widget: "string" }
+          - { label: "Introduction", name: "introduction", widget: "markdown" }
 
   - name: "teaching"
     label: "Teaching"
     files:
       - file: "_data/teaching.yml"
-        label: "Teaching & OER Content"
+        label: "Teaching"
         name: "teaching"
         fields:
-          - { label: "Section Title", name: "section_title", widget: "string", default: "Teaching & Open Educational Resources" }
-          - { label: "Teaching Overview", name: "teaching_intro", widget: "text" }
-          - { label: "Courses Taught", name: "courses", widget: "list", fields: [
-              { label: "Course Code", name: "code", widget: "string" },
-              { label: "Course Name", name: "title", widget: "string" },
-              { label: "Course Description", name: "description", widget: "text" }
-            ]}
+          - { label: "Anchor Name", name: "anchor", widget: "string", hint: "e.g. teaching" }
+          - { label: "Title", name: "section_title", widget: "string" }
+          - { label: "Introduction", name: "introduction", widget: "markdown" }
 
   - name: "partners"
     label: "Partners"
     files:
       - file: "_data/partners.yml"
-        label: "Collaborators & Partners"
+        label: "Partners Instructions"
         name: "partners"
         fields:
-          - { label: "Section Title", name: "section_title", widget: "string", default: "Partners" }
-          - { label: "Partners Intro", name: "partners_intro", widget: "text" }
-          - { label: "Partners List", name: "partners_list", widget: "list", fields: [
-              { label: "Partner Name", name: "name", widget: "string" },
-              { label: "Association / Role", name: "association", widget: "string" },
-              { label: "Website Link", name: "url", widget: "string" }
-            ]}
+          - { label: "Anchor Name", name: "anchor", widget: "string", hint: "e.g. partners" }
+          - { label: "Title", name: "section_title", widget: "string" }
+          - { label: "Introduction", name: "introduction", widget: "markdown" }
+          - { label: "Instructions", name: "instructions", widget: "markdown", default: "To manage Collaborators/Partners, please edit the [Collaborators Spreadsheet](https://docs.google.com/spreadsheets/d/1Y6qGA40KcuQUxagPOT8wLDZxOYE3SUc_qQjr1X_Ir1U/edit#gid=0). Changes will be reflected automatically on the site.", required: false }
 
   - name: "supporters"
     label: "Supporters"
     files:
       - file: "_data/supporters.yml"
-        label: "Supporters & Funding Agencies"
+        label: "Supporters"
         name: "supporters"
         fields:
-          - { label: "Section Title", name: "section_title", widget: "string", default: "Supporters & Funding" }
-          - { label: "Supporters Intro", name: "supporters_intro", widget: "text" }
-          - { label: "Supporters List", name: "supporters_list", widget: "list", fields: [
-              { label: "Name / Acronym", name: "name", widget: "string" },
-              { label: "Full Organization Name", name: "organization", widget: "string" },
-              { label: "Funding Description", name: "description", widget: "text" },
-              { label: "Link URL", name: "link", widget: "string" }
-            ]}
+          - { label: "Anchor Name", name: "anchor", widget: "string", hint: "e.g. supporters" }
+          - { label: "Title", name: "section_title", widget: "string" }
+          - { label: "Introduction", name: "introduction", widget: "markdown" }
 
   - name: "opportunities"
     label: "Opportunities"
     files:
       - file: "_data/opportunities.yml"
-        label: "Opportunities & Join Us"
+        label: "Opportunities"
         name: "opportunities"
         fields:
-          - { label: "Section Title", name: "section_title", widget: "string", default: "Join Us!" }
-          - { label: "Join Us Intro", name: "join_intro", widget: "text" }
-          - { label: "Open Opportunities", name: "current_opportunities", widget: "list", fields: [
-              { label: "Role Title", name: "role", widget: "string" },
-              { label: "Role Description", name: "description", widget: "text" },
-              { label: "Requirements", name: "requirements", widget: "string" }
-            ]}
+          - { label: "Anchor Name", name: "anchor", widget: "string", hint: "e.g. join-us" }
+          - { label: "Title", name: "section_title", widget: "string" }
+          - { label: "Introduction", name: "introduction", widget: "markdown" }
 
   - name: "footer"
     label: "Footer"
     files:
       - file: "_data/footer.yml"
-        label: "Footer Content & Contact"
+        label: "Footer Settings"
         name: "footer"
         fields:
-          - { label: "Footer Note", name: "footer_note", widget: "string", default: "Brain Health Lab @ St. Francis Xavier University" }
-          - { label: "Address", name: "address", widget: "text" }
-          - { label: "Copyright Year", name: "copyright_year", widget: "string", default: "2026" }
+          - { label: "Address Line 1", name: "address_line_1", widget: "string" }
+          - { label: "Address Line 2", name: "address_line_2", widget: "string" }
+          - { label: "Address Line 3", name: "address_line_3", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Google Scholar Link", name: "scholar_link", widget: "string", required: false }
+          - { label: "GitHub Link", name: "github_link", widget: "string", required: false }
+          - { label: "Instagram Link", name: "instagram_link", widget: "string", required: false }

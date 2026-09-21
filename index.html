@@ -16,8 +16,9 @@
     <!-- Icons: Material Symbols Outlined & FontAwesome -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- js-yaml CDN for Sveltia CMS dynamic data loading -->
+    <!-- js-yaml and marked CDNs for Sveltia CMS dynamic data loading and markdown parsing -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
     <!-- jQuery, Handlebars.js & Sheetrock.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -119,7 +120,7 @@
             </a>
 
             <!-- Desktop Navigation Links -->
-            <nav class="hidden lg:flex items-center gap-3 xl:gap-5 text-sm font-bold text-white">
+            <nav id="cms-desktop-nav" class="hidden lg:flex items-center gap-3 xl:gap-5 text-sm font-bold text-white">
                 <a href="#home" class="nav-link hover:text-pink-200 transition-colors py-1">Home</a>
                 <a href="#about" class="nav-link hover:text-pink-200 transition-colors py-1">About</a>
                 <a href="#news" class="nav-link hover:text-pink-200 transition-colors py-1">News</a>
@@ -145,7 +146,7 @@
 
         <!-- Mobile Menu Drawer -->
         <div id="mobile-menu" class="hidden lg:hidden solid-pink-header border-t border-pink-700/60 px-6 py-6 transition-all shadow-2xl">
-            <nav class="flex flex-col gap-3 font-bold text-base text-white text-left">
+            <nav id="cms-mobile-nav" class="flex flex-col gap-3 font-bold text-base text-white text-left">
                 <a href="#home" class="mobile-nav-link hover:text-pink-200 py-1 border-b border-pink-700/40">Home</a>
                 <a href="#about" class="mobile-nav-link hover:text-pink-200 py-1 border-b border-pink-700/40">About</a>
                 <a href="#news" class="mobile-nav-link hover:text-pink-200 py-1 border-b border-pink-700/40">News</a>
@@ -175,12 +176,12 @@
                         Interdisciplinary Neuroscience & <span class="bg-gradient-to-r from-brand-darkPink via-brand-pink to-pink-500 bg-clip-text text-transparent">Brain Health Research</span>
                     </h1>
                     
-                    <p id="cms-hero-sub1" class="text-base md:text-lg text-slate-700 max-w-2xl mb-4 leading-relaxed font-medium text-left">
+                    <div id="cms-hero-sub1" class="text-base md:text-lg text-slate-700 max-w-2xl mb-4 leading-relaxed font-medium text-left">
                         The <strong class="font-extrabold text-slate-900">Brain Health Lab @ StFX</strong> is a research group led by <a href="#pi-profile" class="text-brand-darkPink font-extrabold hover:text-brand-pink focus:outline-none transition-colors">Dr. Erin Mazerolle</a>.
-                    </p>
-                    <p id="cms-hero-sub2" class="text-base md:text-lg text-slate-700 max-w-2xl mb-8 leading-relaxed font-medium text-left">
+                    </div>
+                    <div id="cms-hero-sub2" class="text-base md:text-lg text-slate-700 max-w-2xl mb-8 leading-relaxed font-medium text-left">
                         Our team of collaborators and trainees <strong class="font-extrabold text-slate-900">advance</strong> brain science, health, and literacy through diverse perspectives and backgrounds combining education, psychology, health, biology, computer science, chemistry, engineering, physics, neuropsychology, and neurology.
-                    </p>
+                    </div>
 
                     <div class="flex flex-wrap items-center justify-start gap-3">
                         <a href="#news" class="w-full sm:w-auto bg-brand-pink hover:bg-brand-darkPink text-white font-bold px-6 py-3 rounded-2xl shadow-lg shadow-pink-200 transition-all flex items-center justify-center gap-2 text-sm">
@@ -276,9 +277,9 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="max-w-3xl mb-16 text-left">
                 <h2 id="cms-about-title" class="text-2xl md:text-3xl font-extrabold text-slate-900 mb-4">Research Areas</h2>
-                <p id="cms-about-subtitle" class="text-base text-slate-600 leading-relaxed font-medium">
+                <div id="cms-about-subtitle" class="text-base text-slate-600 leading-relaxed font-medium">
                     Our laboratory integrates community-engaged outreach, clinical brain imaging translation, and reproducible neuroscience methods.
-                </p>
+                </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
@@ -311,7 +312,7 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="mb-12 text-left">
                 <h2 id="cms-news-title" class="text-2xl md:text-3xl font-extrabold text-slate-900 mb-2">News</h2>
-                <p id="cms-news-subtitle" class="text-base text-slate-600 font-medium">Recent updates from our lab and initiatives.</p>
+                <div id="cms-news-subtitle" class="text-base text-slate-600 font-medium">Recent updates from our lab and initiatives.</div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
@@ -393,7 +394,8 @@
     <section id="publications" class="py-16 md:py-24 border-b border-slate-200/80 bg-white text-left">
         <div class="max-w-7xl mx-auto px-6">
             <div class="max-w-3xl mb-12 text-left">
-                <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900">Publications and Presentations</h2>
+                <h2 id="cms-publications-title" class="text-2xl md:text-3xl font-extrabold text-slate-900">Publications and Presentations</h2>
+                <div id="cms-publications-intro" class="text-base text-slate-600 font-medium mt-4"></div>
             </div>
 
             <!-- Publications Categories Tabs -->
@@ -514,7 +516,8 @@
     <section id="team" class="py-16 md:py-24 border-b border-slate-200/80 bg-slate-50 text-left">
         <div class="max-w-7xl mx-auto px-6">
             <div class="max-w-3xl mb-12 text-left">
-                <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mb-4">Our Team</h2>
+                <h2 id="cms-team-title" class="text-2xl md:text-3xl font-extrabold text-slate-900 mb-4">Our Team</h2>
+                <div id="cms-team-intro" class="text-base text-slate-600 font-medium"></div>
             </div>
 
             <!-- PI Card -->
@@ -539,12 +542,10 @@
                                 <span>Download Full CV</span>
                             </a>
                         </div>
-                        <p class="text-base text-slate-700 leading-relaxed font-medium mb-4 text-left">
-                            Dr. Erin Mazerolle is an Associate Professor in the <a href="https://www.stfx.ca/academics/science/psychology" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-extrabold hover:underline">Department of Psychology</a> at St. Francis Xavier University in Antigonish, Nova Scotia, where she is cross-appointed to the <a href="https://www.stfx.ca/academics/science/computer-science" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-extrabold hover:underline">Department of Computer Science</a> and <a href="https://www.stfx.ca/academics/science/biology" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-extrabold hover:underline">Department of Biology</a>.
-                        </p>
-                        <p class="text-base text-slate-700 leading-relaxed font-medium mb-2 text-left">
-                            Erin holds an adjunct appointment in the <a href="https://www.dal.ca/faculty/science/psychology_neuroscience.html" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-extrabold hover:underline">Department of Psychology and Neuroscience</a> at Dalhousie University, is an Affiliate Member of <a href="https://www.uvic.ca/socialsciences/psychology/" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-extrabold hover:underline">Psychology at the University of Victoria</a>, and a Scientific Affiliate (Research) of <a href="https://www.nshealth.ca/" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-extrabold hover:underline">Nova Scotia Health</a>.
-                        </p>
+                        <div id="cms-pi-bio" class="text-base text-slate-700 leading-relaxed font-medium mb-4 text-left">
+                            <p class="mb-4">Dr. Erin Mazerolle is an Associate Professor in the <a href="https://www.stfx.ca/academics/science/psychology" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-extrabold hover:underline">Department of Psychology</a> at St. Francis Xavier University in Antigonish, Nova Scotia, where she is cross-appointed to the <a href="https://www.stfx.ca/academics/science/computer-science" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-extrabold hover:underline">Department of Computer Science</a> and <a href="https://www.stfx.ca/academics/science/biology" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-extrabold hover:underline">Department of Biology</a>.</p>
+                            <p class="mb-2">Erin holds an adjunct appointment in the <a href="https://www.dal.ca/faculty/science/psychology_neuroscience.html" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-extrabold hover:underline">Department of Psychology and Neuroscience</a> at Dalhousie University, is an Affiliate Member of <a href="https://www.uvic.ca/socialsciences/psychology/" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-extrabold hover:underline">Psychology at the University of Victoria</a>, and a Scientific Affiliate (Research) of <a href="https://www.nshealth.ca/" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-extrabold hover:underline">Nova Scotia Health</a>.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -604,7 +605,8 @@
     <section id="teaching" class="py-16 md:py-24 border-b border-slate-200/80 bg-white text-left">
         <div class="max-w-7xl mx-auto px-6">
             <div class="max-w-3xl mb-12 text-left">
-                <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900">Teaching</h2>
+                <h2 id="cms-teaching-title" class="text-2xl md:text-3xl font-extrabold text-slate-900">Teaching</h2>
+                <div id="cms-teaching-intro" class="text-base text-slate-600 font-medium mt-4"></div>
             </div>
 
             <!-- Teaching Categories Tabs -->
@@ -789,8 +791,8 @@
     <section id="partners" class="py-16 md:py-24 border-b border-slate-200/80 bg-slate-50 text-left">
         <div class="max-w-7xl mx-auto px-6 text-left">
             <div class="max-w-3xl mb-12 text-left">
-                <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mb-4">Partners</h2>
-                <p class="text-base text-slate-600 font-medium">Research partners and collaborators across institutions.</p>
+                <h2 id="cms-partners-title" class="text-2xl md:text-3xl font-extrabold text-slate-900 mb-4">Partners</h2>
+                <div id="cms-partners-intro" class="text-base text-slate-600 font-medium">Research partners and collaborators across institutions.</div>
             </div>
 
             <div id="collaborators-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-left"></div>
@@ -801,8 +803,8 @@
     <section id="supporters" class="py-16 md:py-24 border-b border-slate-200/80 bg-white text-left">
         <div class="max-w-7xl mx-auto px-6 text-left">
             <div class="max-w-3xl mb-12 text-left">
-                <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mb-4">Supporters</h2>
-                <p class="text-base text-slate-600 font-medium">Institutional supporters, grants, and funding programs powering our research.</p>
+                <h2 id="cms-supporters-title" class="text-2xl md:text-3xl font-extrabold text-slate-900 mb-4">Supporters</h2>
+                <div id="cms-supporters-intro" class="text-base text-slate-600 font-medium">Institutional supporters, grants, and funding programs powering our research.</div>
             </div>
 
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8 items-center justify-items-center py-4">
@@ -843,8 +845,8 @@
     <section id="join-us" class="py-16 md:py-24 border-b border-slate-200/80 bg-white text-left">
         <div class="max-w-7xl mx-auto px-6">
             <div class="max-w-3xl mb-16 text-left">
-                <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mb-4">Join Us!</h2>
-                <p class="text-base text-slate-600 font-medium">Opportunities for graduate students and honours trainees.</p>
+                <h2 id="cms-opportunities-title" class="text-2xl md:text-3xl font-extrabold text-slate-900 mb-4">Join Us!</h2>
+                <div id="cms-opportunities-intro" class="text-base text-slate-600 font-medium">Opportunities for graduate students and honours trainees.</div>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 text-left">
@@ -919,11 +921,15 @@
                     <ul class="space-y-2 text-xs text-slate-700 font-medium">
                         <li class="flex items-center gap-2 group">
                             <span class="material-symbols-outlined text-brand-darkPink group-hover:text-brand-pink text-base transition-colors">mail</span>
-                            <a href="mailto:brainhealthlab@stfx.ca" class="font-bold text-brand-darkPink group-hover:text-brand-pink hover:underline transition-colors">brainhealthlab@stfx.ca</a>
+                            <a id="cms-footer-email" href="mailto:brainhealthlab@stfx.ca" class="font-bold text-brand-darkPink group-hover:text-brand-pink hover:underline transition-colors">brainhealthlab@stfx.ca</a>
                         </li>
                         <li class="flex items-start gap-2">
                             <span class="material-symbols-outlined text-brand-darkPink hover:text-brand-pink text-base mt-0.5 transition-colors">location_on</span>
-                            <span class="leading-relaxed">Department of Psychology<br>St. Francis Xavier University<br>Antigonish, Nova Scotia, Canada</span>
+                            <span class="leading-relaxed">
+                                <span id="cms-footer-address1">Department of Psychology</span><br>
+                                <span id="cms-footer-address2">St. Francis Xavier University</span><br>
+                                <span id="cms-footer-address3">Antigonish, Nova Scotia, Canada</span>
+                            </span>
                         </li>
                     </ul>
                 </div>
@@ -932,16 +938,16 @@
                 <div class="md:col-span-4 text-left">
                     <h4 class="text-xs font-extrabold text-brand-darkPink uppercase tracking-wider mb-3">Connect With Us</h4>
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <a href="mailto:brainhealthlab@stfx.ca" aria-label="Email" class="w-9 h-9 rounded-2xl bg-pink-100 text-brand-darkPink hover:bg-brand-pink hover:text-white transition-all flex items-center justify-center border border-pink-200">
+                        <a id="cms-footer-social-email" href="mailto:brainhealthlab@stfx.ca" aria-label="Email" class="w-9 h-9 rounded-2xl bg-pink-100 text-brand-darkPink hover:bg-brand-pink hover:text-white transition-all flex items-center justify-center border border-pink-200">
                             <i class="fa-solid fa-envelope text-sm"></i>
                         </a>
-                        <a href="https://scholar.google.ca/citations?user=emazerol" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" class="w-9 h-9 rounded-2xl bg-pink-100 text-brand-darkPink hover:bg-brand-pink hover:text-white transition-all flex items-center justify-center border border-pink-200">
+                        <a id="cms-footer-social-scholar" href="https://scholar.google.ca/citations?user=emazerol" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" class="w-9 h-9 rounded-2xl bg-pink-100 text-brand-darkPink hover:bg-brand-pink hover:text-white transition-all flex items-center justify-center border border-pink-200">
                             <i class="fa-solid fa-graduation-cap text-sm"></i>
                         </a>
-                        <a href="https://github.com/brainhealthlabstfx" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="w-9 h-9 rounded-2xl bg-pink-100 text-brand-darkPink hover:bg-brand-pink hover:text-white transition-all flex items-center justify-center border border-pink-200">
+                        <a id="cms-footer-social-github" href="https://github.com/brainhealthlabstfx" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="w-9 h-9 rounded-2xl bg-pink-100 text-brand-darkPink hover:bg-brand-pink hover:text-white transition-all flex items-center justify-center border border-pink-200">
                             <i class="fa-brands fa-github text-sm"></i>
                         </a>
-                        <a href="https://www.instagram.com/brainhealthlab_stfx/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-9 h-9 rounded-2xl bg-pink-100 text-brand-darkPink hover:bg-brand-pink hover:text-white transition-all flex items-center justify-center border border-pink-200">
+                        <a id="cms-footer-social-instagram" href="https://www.instagram.com/brainhealthlab_stfx/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-9 h-9 rounded-2xl bg-pink-100 text-brand-darkPink hover:bg-brand-pink hover:text-white transition-all flex items-center justify-center border border-pink-200">
                             <i class="fa-brands fa-instagram text-sm"></i>
                         </a>
                     </div>
@@ -1243,8 +1249,22 @@
                 // Settings
                 const settings = await fetchCmsYaml('settings.yml');
                 if (settings) {
+                    if (settings.website_title) document.title = settings.website_title;
                     if (settings.lab_title) $('#cms-nav-title').text(settings.lab_title);
                     if (settings.institution) $('#cms-nav-institution').text(settings.institution);
+                }
+
+                // Navigation
+                const nav = await fetchCmsYaml('navigation.yml');
+                if (nav && nav.links && nav.links.length > 0) {
+                    const desktopNav = $('#cms-desktop-nav');
+                    const mobileNav = $('#cms-mobile-nav');
+                    desktopNav.empty();
+                    mobileNav.empty();
+                    nav.links.forEach(link => {
+                        desktopNav.append(`<a href="${link.target}" class="nav-link hover:text-pink-200 transition-colors py-1">${link.label}</a>`);
+                        mobileNav.append(`<a href="${link.target}" class="mobile-nav-link hover:text-pink-200 py-1 border-b border-pink-700/40">${link.label}</a>`);
+                    });
                 }
 
                 // Home / Banner
@@ -1253,22 +1273,91 @@
                     if (hero.headline_text || hero.headline_accent) {
                         $('#cms-hero-title').html((hero.headline_text || '') + ' <span class="bg-gradient-to-r from-brand-darkPink via-brand-pink to-pink-500 bg-clip-text text-transparent">' + (hero.headline_accent || '') + '</span>');
                     }
-                    if (hero.subtitle_p1) $('#cms-hero-sub1').text(hero.subtitle_p1);
-                    if (hero.subtitle_p2) $('#cms-hero-sub2').text(hero.subtitle_p2);
+                    if (hero.subtitle_p1) $('#cms-hero-sub1').html(marked.parse(hero.subtitle_p1));
+                    if (hero.subtitle_p2) $('#cms-hero-sub2').html(marked.parse(hero.subtitle_p2));
                 }
 
                 // About
                 const about = await fetchCmsYaml('about.yml');
                 if (about) {
+                    if (about.anchor) $('#about').attr('id', about.anchor);
                     if (about.section_title) $('#cms-about-title').text(about.section_title);
-                    if (about.section_subtitle) $('#cms-about-subtitle').text(about.section_subtitle);
+                    if (about.introduction) $('#cms-about-subtitle').html(marked.parse(about.introduction));
+                    if (about.pi_bio) $('#cms-pi-bio').html(marked.parse(about.pi_bio));
                 }
 
                 // News
                 const news = await fetchCmsYaml('news.yml');
                 if (news) {
+                    if (news.anchor) $('#news').attr('id', news.anchor);
                     if (news.section_title) $('#cms-news-title').text(news.section_title);
-                    if (news.news_subtitle) $('#cms-news-subtitle').text(news.news_subtitle);
+                    if (news.introduction) $('#cms-news-subtitle').html(marked.parse(news.introduction));
+                }
+                
+                // Publications
+                const pub = await fetchCmsYaml('publications.yml');
+                if (pub) {
+                    if (pub.anchor) $('#publications').attr('id', pub.anchor);
+                    if (pub.section_title) $('#cms-publications-title').text(pub.section_title);
+                    if (pub.introduction) $('#cms-publications-intro').html(marked.parse(pub.introduction));
+                }
+                
+                // Team
+                const team = await fetchCmsYaml('team.yml');
+                if (team) {
+                    if (team.anchor) $('#team').attr('id', team.anchor);
+                    if (team.section_title) $('#cms-team-title').text(team.section_title);
+                    if (team.introduction) $('#cms-team-intro').html(marked.parse(team.introduction));
+                }
+                
+                // Teaching
+                const teach = await fetchCmsYaml('teaching.yml');
+                if (teach) {
+                    if (teach.anchor) $('#teaching').attr('id', teach.anchor);
+                    if (teach.section_title) $('#cms-teaching-title').text(teach.section_title);
+                    if (teach.introduction) $('#cms-teaching-intro').html(marked.parse(teach.introduction));
+                }
+                
+                // Partners
+                const part = await fetchCmsYaml('partners.yml');
+                if (part) {
+                    if (part.anchor) $('#partners').attr('id', part.anchor);
+                    if (part.section_title) $('#cms-partners-title').text(part.section_title);
+                    if (part.introduction) $('#cms-partners-intro').html(marked.parse(part.introduction));
+                }
+                
+                // Supporters
+                const supp = await fetchCmsYaml('supporters.yml');
+                if (supp) {
+                    if (supp.anchor) $('#supporters').attr('id', supp.anchor);
+                    if (supp.section_title) $('#cms-supporters-title').text(supp.section_title);
+                    if (supp.introduction) $('#cms-supporters-intro').html(marked.parse(supp.introduction));
+                }
+                
+                // Opportunities
+                const opp = await fetchCmsYaml('opportunities.yml');
+                if (opp) {
+                    if (opp.anchor) $('#join-us').attr('id', opp.anchor);
+                    if (opp.section_title) $('#cms-opportunities-title').text(opp.section_title);
+                    if (opp.introduction) $('#cms-opportunities-intro').html(marked.parse(opp.introduction));
+                }
+
+                // Footer
+                const footer = await fetchCmsYaml('footer.yml');
+                if (footer) {
+                    if (footer.email) {
+                        $('#cms-footer-email').attr('href', 'mailto:' + footer.email).text(footer.email);
+                        $('#cms-footer-social-email').attr('href', 'mailto:' + footer.email);
+                    }
+                    if (footer.address_line_1) $('#cms-footer-address1').text(footer.address_line_1);
+                    if (footer.address_line_2) $('#cms-footer-address2').text(footer.address_line_2);
+                    if (footer.address_line_3) $('#cms-footer-address3').text(footer.address_line_3);
+                    if (footer.scholar_link) $('#cms-footer-social-scholar').attr('href', footer.scholar_link).show();
+                    else $('#cms-footer-social-scholar').hide();
+                    if (footer.github_link) $('#cms-footer-social-github').attr('href', footer.github_link).show();
+                    else $('#cms-footer-social-github').hide();
+                    if (footer.instagram_link) $('#cms-footer-social-instagram').attr('href', footer.instagram_link).show();
+                    else $('#cms-footer-social-instagram').hide();
                 }
             }
 
