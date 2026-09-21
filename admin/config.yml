@@ -13,6 +13,7 @@ collections:
       - name: "branding_file"
         label: "Branding Details"
         file: "index.html"
+        format: "raw"
         fields:
           - { label: "Lab Title", name: "lab_title", widget: "string", default: "Brain Health Lab" }
           - { label: "Institution Name", name: "institution", widget: "string", default: "St. Francis Xavier University" }
@@ -27,6 +28,7 @@ collections:
       - name: "hero_file"
         label: "Hero Copy"
         file: "index.html"
+        format: "raw"
         fields:
           - { label: "Hero Headline", name: "hero_headline", widget: "string", default: "Advancing Brain Health, Science, & Literacy" }
           - { label: "Hero Subtitle", name: "hero_subtitle", widget: "text", default: "The Brain Health Lab at St. Francis Xavier University is a research group led by Dr. Erin Mazerolle, investigating brain function, cerebrovascular health, and neuroimaging." }
@@ -38,6 +40,7 @@ collections:
       - name: "about_file"
         label: "PI Profile Details"
         file: "index.html"
+        format: "raw"
         fields:
           - { label: "PI Name", name: "pi_name", widget: "string", default: "Dr. Erin Mazerolle" }
           - { label: "PI Title", name: "pi_title", widget: "string", default: "Principal Investigator | Assistant Professor" }
@@ -50,6 +53,7 @@ collections:
       - name: "news_file"
         label: "News Subtitle"
         file: "index.html"
+        format: "raw"
         fields:
           - { label: "Section Subtitle", name: "news_subtitle", widget: "string", default: "Recent updates from our lab and initiatives." }
 
@@ -59,6 +63,7 @@ collections:
       - name: "teaching_file"
         label: "Teaching Overview & Courses"
         file: "index.html"
+        format: "raw"
         fields:
           - { label: "Teaching Overview", name: "teaching_intro", widget: "markdown" }
           - { label: "Courses Taught", name: "courses", widget: "list", fields: [
@@ -73,6 +78,7 @@ collections:
       - name: "join_us_file"
         label: "Student Info & Opportunities"
         file: "index.html"
+        format: "raw"
         fields:
           - { label: "Prospective Students Intro", name: "join_intro", widget: "markdown" }
           - { label: "Current Opportunities", name: "opportunities", widget: "markdown" }
@@ -83,8 +89,10 @@ collections:
       - name: "sheetrock_file"
         label: "Google Sheets Note"
         file: "index.html"
+        format: "raw"
         fields:
           - { label: "Google Sheets Note", name: "sheet_note", widget: "string", default: "Team members, Publications, and Partners are dynamically populated from your Google Spreadsheet via Sheetrock.js." }
+
 
 
 
