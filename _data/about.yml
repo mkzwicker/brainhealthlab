@@ -1,4 +1,9 @@
-pi_name: "Dr. Erin Mazerolle"
-pi_title: "Principal Investigator | Assistant Professor"
-pi_department: "Department of Psychology, St. Francis Xavier University"
-pi_bio: "Dr. Mazerolle leads research investigating brain function, cerebrovascular health, and neuroimaging."
+section_title: "Research Areas"
+section_subtitle: "Our laboratory integrates community-engaged outreach, clinical brain imaging translation, and reproducible neuroscience methods."
+research_areas:
+  - title: "Brain Health Literacy"
+    description: "Improving brain health literacy through community-engaged research, interactive educational tools, and open access learning materials."
+  - title: "Clinical Translation"
+    description: "Translating cutting-edge functional brain imaging and vascular biomarker techniques directly into clinical patient care."
+  - title: "Reproducibility"
+    description: "Improving the reproducibility, open data pipelines, and methodological rigor of functional brain imaging research."

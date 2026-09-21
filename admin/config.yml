@@ -11,7 +11,7 @@ collections:
     label: "Settings"
     files:
       - file: "_data/settings.yml"
-        label: "Site Settings"
+        label: "Site Settings & Branding"
         name: "settings"
         fields:
           - { label: "Lab Title", name: "lab_title", widget: "string", default: "Brain Health Lab" }
@@ -25,92 +25,120 @@ collections:
     label: "Home/Banner"
     files:
       - file: "_data/home_banner.yml"
-        label: "Home/Banner Content"
+        label: "Hero Section Content"
         name: "home_banner"
         fields:
-          - { label: "Hero Headline", name: "hero_headline", widget: "string", default: "Advancing Brain Health, Science, & Literacy" }
-          - { label: "Hero Subtitle", name: "hero_subtitle", widget: "text", default: "The Brain Health Lab at St. Francis Xavier University is a research group led by Dr. Erin Mazerolle, investigating brain function, cerebrovascular health, and neuroimaging." }
-          - { label: "Hero Team Note", name: "hero_team_note", widget: "markdown", default: "Our team of collaborators and trainees advance brain science, health, and literacy through diverse perspectives and backgrounds combining education, psychology, health, biology, computer science, chemistry, engineering, physics, neuropsychology, and neurology." }
+          - { label: "Headline Main Text", name: "headline_text", widget: "string", default: "Interdisciplinary Neuroscience &" }
+          - { label: "Headline Accent Text (Pink)", name: "headline_accent", widget: "string", default: "Brain Health Research" }
+          - { label: "Subtitle Paragraph 1", name: "subtitle_p1", widget: "text" }
+          - { label: "Subtitle Paragraph 2", name: "subtitle_p2", widget: "text" }
+          - { label: "Featured Initiatives Carousel", name: "featured_initiatives", widget: "list", fields: [
+              { label: "Initiative Title", name: "title", widget: "string" },
+              { label: "Description", name: "description", widget: "text" },
+              { label: "Link Button Text", name: "link_text", widget: "string" },
+              { label: "Link URL", name: "link_url", widget: "string" }
+            ]}
 
   - name: "about"
     label: "About"
     files:
       - file: "_data/about.yml"
-        label: "About Content"
+        label: "About & Research Areas"
         name: "about"
         fields:
-          - { label: "PI Name", name: "pi_name", widget: "string", default: "Dr. Erin Mazerolle" }
-          - { label: "PI Title", name: "pi_title", widget: "string", default: "Principal Investigator | Assistant Professor" }
-          - { label: "Department", name: "pi_department", widget: "string", default: "Department of Psychology, St. Francis Xavier University" }
-          - { label: "PI Bio", name: "pi_bio", widget: "markdown" }
+          - { label: "Section Title", name: "section_title", widget: "string", default: "Research Areas" }
+          - { label: "Section Subtitle", name: "section_subtitle", widget: "text" }
+          - { label: "Research Areas Cards", name: "research_areas", widget: "list", fields: [
+              { label: "Card Title", name: "title", widget: "string" },
+              { label: "Card Description", name: "description", widget: "text" }
+            ]}
 
   - name: "news"
     label: "News"
     files:
       - file: "_data/news.yml"
-        label: "News Content"
+        label: "News Articles & Updates"
         name: "news"
         fields:
+          - { label: "Section Title", name: "section_title", widget: "string", default: "News" }
           - { label: "Section Subtitle", name: "news_subtitle", widget: "string", default: "Recent updates from our lab and initiatives." }
+          - { label: "News Articles", name: "news_items", widget: "list", fields: [
+              { label: "Category Badge", name: "category", widget: "string", default: "Update" },
+              { label: "Date", name: "date", widget: "string" },
+              { label: "Headline", name: "title", widget: "string" },
+              { label: "Article Summary", name: "description", widget: "text" },
+              { label: "Link Text", name: "link_text", widget: "string" },
+              { label: "Link URL", name: "link_url", widget: "string" }
+            ]}
 
   - name: "teaching"
     label: "Teaching"
     files:
       - file: "_data/teaching.yml"
-        label: "Teaching Content"
+        label: "Teaching & OER Content"
         name: "teaching"
         fields:
-          - { label: "Teaching Overview", name: "teaching_intro", widget: "markdown" }
+          - { label: "Section Title", name: "section_title", widget: "string", default: "Teaching & Open Educational Resources" }
+          - { label: "Teaching Overview", name: "teaching_intro", widget: "text" }
           - { label: "Courses Taught", name: "courses", widget: "list", fields: [
               { label: "Course Code", name: "code", widget: "string" },
               { label: "Course Name", name: "title", widget: "string" },
-              { label: "Description", name: "description", widget: "text" }
+              { label: "Course Description", name: "description", widget: "text" }
             ]}
 
   - name: "partners"
     label: "Partners"
     files:
       - file: "_data/partners.yml"
-        label: "Partners Content"
+        label: "Collaborators & Partners"
         name: "partners"
         fields:
-          - { label: "Partners Intro", name: "partners_intro", widget: "markdown", required: false }
-          - { label: "Partners List", name: "partners_list", widget: "list", required: false, fields: [
+          - { label: "Section Title", name: "section_title", widget: "string", default: "Partners" }
+          - { label: "Partners Intro", name: "partners_intro", widget: "text" }
+          - { label: "Partners List", name: "partners_list", widget: "list", fields: [
               { label: "Partner Name", name: "name", widget: "string" },
-              { label: "Partner Link", name: "link", widget: "string", required: false },
-              { label: "Partner Logo", name: "logo", widget: "image", required: false }
+              { label: "Association / Role", name: "association", widget: "string" },
+              { label: "Website Link", name: "url", widget: "string" }
             ]}
 
   - name: "supporters"
     label: "Supporters"
     files:
       - file: "_data/supporters.yml"
-        label: "Supporters Content"
+        label: "Supporters & Funding Agencies"
         name: "supporters"
         fields:
-          - { label: "Supporters Intro", name: "supporters_intro", widget: "markdown", required: false }
-          - { label: "Supporters List", name: "supporters_list", widget: "list", required: false, fields: [
-              { label: "Supporter Name", name: "name", widget: "string" },
-              { label: "Supporter Link", name: "link", widget: "string", required: false },
-              { label: "Supporter Logo", name: "logo", widget: "image", required: false }
+          - { label: "Section Title", name: "section_title", widget: "string", default: "Supporters & Funding" }
+          - { label: "Supporters Intro", name: "supporters_intro", widget: "text" }
+          - { label: "Supporters List", name: "supporters_list", widget: "list", fields: [
+              { label: "Name / Acronym", name: "name", widget: "string" },
+              { label: "Full Organization Name", name: "organization", widget: "string" },
+              { label: "Funding Description", name: "description", widget: "text" },
+              { label: "Link URL", name: "link", widget: "string" }
             ]}
 
   - name: "opportunities"
     label: "Opportunities"
     files:
       - file: "_data/opportunities.yml"
-        label: "Opportunities Content"
+        label: "Opportunities & Join Us"
         name: "opportunities"
         fields:
-          - { label: "Prospective Students Intro", name: "join_intro", widget: "markdown" }
-          - { label: "Current Opportunities", name: "opportunities", widget: "markdown" }
+          - { label: "Section Title", name: "section_title", widget: "string", default: "Join Us!" }
+          - { label: "Join Us Intro", name: "join_intro", widget: "text" }
+          - { label: "Open Opportunities", name: "current_opportunities", widget: "list", fields: [
+              { label: "Role Title", name: "role", widget: "string" },
+              { label: "Role Description", name: "description", widget: "text" },
+              { label: "Requirements", name: "requirements", widget: "string" }
+            ]}
 
   - name: "footer"
     label: "Footer"
     files:
       - file: "_data/footer.yml"
-        label: "Footer Content"
+        label: "Footer Content & Contact"
         name: "footer"
         fields:
-          - { label: "Footer Note", name: "footer_note", widget: "string", default: "Brain Health Lab © 2026" }
-          - { label: "Address", name: "address", widget: "text", required: false }
+          - { label: "Footer Note", name: "footer_note", widget: "string", default: "Brain Health Lab @ St. Francis Xavier University" }
+          - { label: "Address", name: "address", widget: "text" },
+          - { label: "Copyright Year", name: "copyright_year", widget: "string", default: "2026" }

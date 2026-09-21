@@ -1,0 +1,12 @@
+section_title: "Partners"
+partners_intro: "We collaborate with academic institutions, healthcare networks, and community organizations."
+partners_list:
+  - name: "Family Service in Mi'kma'ki"
+    association: "Community Partner Organization"
+    url: "https://www.familyservice.ca/"
+  - name: "Dalhousie University"
+    association: "Academic Partner"
+    url: "https://www.dal.ca/"
+  - name: "St. Francis Xavier University"
+    association: "Home Institution"
+    url: "https://www.stfx.ca/"

@@ -1,2 +1,9 @@
-join_intro: "We welcome passionate undergraduate and graduate students."
-opportunities: "Honours thesis positions and research assistantships available."
+section_title: "Join Us!"
+join_intro: "Interested in brain health research, neuroimaging, or community outreach? We are always looking for motivated trainees and collaborators."
+current_opportunities:
+  - role: "Honours Students"
+    description: "Undergraduate thesis opportunities in Psychology and Neuroscience."
+    requirements: "Enrolled in StFX Psychology or Neuroscience program."
+  - role: "Research Assistants"
+    description: "Part-time or summer position assisting with study recruitment, data collection, and OER development."
+    requirements: "Strong interest in neuroscience, statistics, or open science."
