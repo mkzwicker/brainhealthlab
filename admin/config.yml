@@ -7,11 +7,11 @@ media_folder: "media"
 public_folder: "media"
 
 collections:
-  - name: "site_sections"
-    label: "📄 Navigation & Site Sections"
+  - name: "site_branding"
+    label: "⚙️ Site Settings & Branding"
     files:
-      - name: "site_branding"
-        label: "⚙️ Site Settings & Branding"
+      - name: "branding_file"
+        label: "Branding Details"
         file: "index.html"
         fields:
           - { label: "Lab Title", name: "lab_title", widget: "string", default: "Brain Health Lab" }
@@ -21,16 +21,22 @@ collections:
           - { label: "Instagram URL", name: "instagram_url", widget: "string", default: "https://www.instagram.com/brainhealthlab_stfx/" }
           - { label: "GitHub URL", name: "github_url", widget: "string", default: "https://github.com/brainhealthlabstfx" }
 
-      - name: "hero"
-        label: "1. Home / Hero Section"
+  - name: "hero_section"
+    label: "1. Home / Hero Section"
+    files:
+      - name: "hero_file"
+        label: "Hero Copy"
         file: "index.html"
         fields:
           - { label: "Hero Headline", name: "hero_headline", widget: "string", default: "Advancing Brain Health, Science, & Literacy" }
           - { label: "Hero Subtitle", name: "hero_subtitle", widget: "text", default: "The Brain Health Lab at St. Francis Xavier University is a research group led by Dr. Erin Mazerolle, investigating brain function, cerebrovascular health, and neuroimaging." }
           - { label: "Hero Team Note", name: "hero_team_note", widget: "markdown", default: "Our team of collaborators and trainees advance brain science, health, and literacy through diverse perspectives and backgrounds combining education, psychology, health, biology, computer science, chemistry, engineering, physics, neuropsychology, and neurology." }
 
-      - name: "about"
-        label: "2. About Section (PI Profile)"
+  - name: "about_section"
+    label: "2. About Section (PI Profile)"
+    files:
+      - name: "about_file"
+        label: "PI Profile Details"
         file: "index.html"
         fields:
           - { label: "PI Name", name: "pi_name", widget: "string", default: "Dr. Erin Mazerolle" }
@@ -38,14 +44,20 @@ collections:
           - { label: "Department", name: "pi_department", widget: "string", default: "Department of Psychology, St. Francis Xavier University" }
           - { label: "PI Bio", name: "pi_bio", widget: "markdown" }
 
-      - name: "news_section"
-        label: "3. News Section Subtitle"
+  - name: "news_section"
+    label: "3. News Section Subtitle"
+    files:
+      - name: "news_file"
+        label: "News Subtitle"
         file: "index.html"
         fields:
           - { label: "Section Subtitle", name: "news_subtitle", widget: "string", default: "Recent updates from our lab and initiatives." }
 
-      - name: "teaching"
-        label: "4. Teaching Section"
+  - name: "teaching_section"
+    label: "4. Teaching Section"
+    files:
+      - name: "teaching_file"
+        label: "Teaching Overview & Courses"
         file: "index.html"
         fields:
           - { label: "Teaching Overview", name: "teaching_intro", widget: "markdown" }
@@ -55,18 +67,25 @@ collections:
               { label: "Description", name: "description", widget: "text" }
             ]}
 
-      - name: "join_us"
-        label: "5. Join Us Section"
+  - name: "join_us_section"
+    label: "5. Join Us Section"
+    files:
+      - name: "join_us_file"
+        label: "Student Info & Opportunities"
         file: "index.html"
         fields:
           - { label: "Prospective Students Intro", name: "join_intro", widget: "markdown" }
           - { label: "Current Opportunities", name: "opportunities", widget: "markdown" }
 
-      - name: "sheetrock_info"
-        label: "📊 Sheetrock Managed Sections (Team, Pubs, Partners)"
+  - name: "sheetrock_info_section"
+    label: "📊 Sheetrock Managed Sections"
+    files:
+      - name: "sheetrock_file"
+        label: "Google Sheets Note"
         file: "index.html"
         fields:
           - { label: "Google Sheets Note", name: "sheet_note", widget: "string", default: "Team members, Publications, and Partners are dynamically populated from your Google Spreadsheet via Sheetrock.js." }
+
 
 
 
