@@ -1,10 +1,10 @@
-anchor: "team"
-section_title: "Our Team"
-introduction: ""
-pi_bio: |
-  Dr. Erin Mazerolle is an Associate Professor in the <a href="https://www.stfx.ca/academics/science/psychology" target="_blank" rel="noopener noreferrer">Department of Psychology</a> at St. Francis Xavier University in Antigonish, Nova Scotia, where she is cross-appointed to the <a href="https://www.stfx.ca/academics/science/computer-science" target="_blank" rel="noopener noreferrer">Department of Computer Science</a> and <a href="https://www.stfx.ca/academics/science/biology" target="_blank" rel="noopener noreferrer">Department of Biology</a>.
+anchor: team
+section_title: Our Team
+introduction: ''
+pi_bio: |-
+  Dr. Erin Mazerolle is an Associate Professor in the <a href="https://www.stfx.ca/academics/science/psychology" target="_blank" rel="noopener noreferrer">Department of Psychology</a> at St. Francis Xavier University in Antigonish, Nova Scotia, where she is cross-appointed to the <a href="https://www.stfx.ca/academics/science/computer-science" target="_blank" rel="noopener noreferrer">Department of Computer Science</a> and <a href="[https://www.stfx.ca/academics/science/biology](https://www.stfx.ca/programs-courses/programs/biology)" target="_blank" rel="noopener noreferrer">Department of Biology</a>.
 
   Erin holds an adjunct appointment in the <a href="https://www.dal.ca/faculty/science/psychology_neuroscience.html" target="_blank" rel="noopener noreferrer">Department of Psychology and Neuroscience</a> at Dalhousie University, is an Affiliate Member of <a href="https://www.uvic.ca/socialsciences/psychology/" target="_blank" rel="noopener noreferrer">Psychology at the University of Victoria</a>, and a Scientific Affiliate (Research) of <a href="https://www.nshealth.ca/" target="_blank" rel="noopener noreferrer">Nova Scotia Health</a>.
-cv_button_label: "Download Full CV"
-cv_button_url: "https://www.erinmazerolle.com/Mazerolle_CV_web.pdf"
-instructions: "To manage Team Members, please edit the [Team Spreadsheet](https://docs.google.com/spreadsheets/d/1hYRIFo5c8reL_e77cofdUBV7eoxFB59P_xxUwWgwRAc/edit#gid=0). Changes will be reflected automatically on the site."
+cv_button_label: Download Full CV
+cv_button_url: https://www.erinmazerolle.com/Mazerolle_CV_web.pdf
+instructions: To manage Team Members, please edit the [Team Spreadsheet](https://docs.google.com/spreadsheets/d/1hYRIFo5c8reL_e77cofdUBV7eoxFB59P_xxUwWgwRAc/edit#gid=0). Changes will be reflected automatically on the site.
