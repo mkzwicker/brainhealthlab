@@ -1,6 +1,6 @@
 anchor: "news"
 section_title: "News"
-introduction: "Recent updates from our lab and initiatives."
+introduction: ""
 news_items:
   - category: "Recruitment"
     date_text: "June 2025"
