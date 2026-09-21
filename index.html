@@ -98,15 +98,11 @@
         a:not([class]), .prose a {
             color: #942663 !important; /* brand-darkPink */
             font-weight: 700 !important;
-            text-decoration: underline !important;
-            text-decoration-color: #fbcfe8 !important; /* pink-200 */
-            text-decoration-thickness: 2px !important;
-            text-underline-offset: 4px !important;
+            text-decoration: none !important; /* pink-200 */
             transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
         }
         a:not([class]):hover, .prose a:hover {
             color: #D25299 !important; /* brand-pink */
-            text-decoration-color: #D25299 !important;
         }
 
         /* Auto-striping for sections */
@@ -128,7 +124,7 @@
                 <i class="fa-solid fa-brain text-xl text-brand-darkPink"></i>
             </div>
         </div>
-        <p class="text-brand-darkPink font-extrabold text-sm tracking-wide animate-pulse">Loading...</p>
+        <p class="text-brand-darkPink font-extrabold text-sm tracking-wide animate-pulse hover:text-brand-pink transition-colors">Loading...</p>
     </div>
 
     <!-- Solid Pink Header Navigation -->
@@ -234,7 +230,7 @@
                                 <div>
                                     <h3 class="text-xl font-extrabold text-slate-900 mb-3">Maintaining Brains Project</h3>
                                     <p class="text-base text-slate-600 leading-relaxed mb-4 font-medium text-left">
-                                        Lifestyle changes could delay or prevent <strong class="text-brand-darkPink underline decoration-pink-300">45% of cognitive impairment</strong>. We co-created interactive tools and community resources to share research on brain health!
+                                        Lifestyle changes could delay or prevent <strong class="text-brand-darkPink">45% of cognitive impairment</strong>. We co-created interactive tools and community resources to share research on brain health!
                                     </p>
                                 </div>
                                 <a href="https://brainhealthlabstfx.github.io/MaintainingBrainsGame/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 font-bold text-brand-darkPink hover:text-brand-pink transition-colors shrink-0">
@@ -340,11 +336,11 @@
                         <span class="material-symbols-outlined text-base">biotech</span>
                         <span>Research Articles</span>
                     </button>
-                    <button id="pub-tab-review" class="pub-tab-btn px-5 py-2.5 rounded-xl font-extrabold text-sm transition-all bg-pink-100 text-brand-darkPink hover:bg-pink-200 flex items-center gap-2">
+                    <button id="pub-tab-review" class="pub-tab-btn px-5 py-2.5 rounded-xl font-extrabold text-sm transition-all bg-pink-100 text-brand-darkPink hover:bg-pink-200 flex items-center gap-2 hover:text-brand-pink transition-colors">
                         <span class="material-symbols-outlined text-base">menu_book</span>
                         <span>Review Articles</span>
                     </button>
-                    <button id="pub-tab-presentations" class="pub-tab-btn px-5 py-2.5 rounded-xl font-extrabold text-sm transition-all bg-pink-100 text-brand-darkPink hover:bg-pink-200 flex items-center gap-2">
+                    <button id="pub-tab-presentations" class="pub-tab-btn px-5 py-2.5 rounded-xl font-extrabold text-sm transition-all bg-pink-100 text-brand-darkPink hover:bg-pink-200 flex items-center gap-2 hover:text-brand-pink transition-colors">
                         <span class="material-symbols-outlined text-base">co_present</span>
                         <span>Conference Presentations</span>
                     </button>
@@ -478,8 +474,8 @@
                             </a>
                         </div>
                         <div id="cms-pi-bio" class="text-base text-slate-700 leading-relaxed font-medium mb-4 text-left">
-                            <p class="mb-4">Dr. Erin Mazerolle is an Associate Professor in the <a href="https://www.stfx.ca/academics/science/psychology" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-extrabold hover:underline">Department of Psychology</a> at St. Francis Xavier University in Antigonish, Nova Scotia, where she is cross-appointed to the <a href="https://www.stfx.ca/academics/science/computer-science" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-extrabold hover:underline">Department of Computer Science</a> and <a href="https://www.stfx.ca/academics/science/biology" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-extrabold hover:underline">Department of Biology</a>.</p>
-                            <p class="mb-2">Erin holds an adjunct appointment in the <a href="https://www.dal.ca/faculty/science/psychology_neuroscience.html" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-extrabold hover:underline">Department of Psychology and Neuroscience</a> at Dalhousie University, is an Affiliate Member of <a href="https://www.uvic.ca/socialsciences/psychology/" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-extrabold hover:underline">Psychology at the University of Victoria</a>, and a Scientific Affiliate (Research) of <a href="https://www.nshealth.ca/" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-extrabold hover:underline">Nova Scotia Health</a>.</p>
+                            <p class="mb-4">Dr. Erin Mazerolle is an Associate Professor in the <a href="https://www.stfx.ca/academics/science/psychology" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-extrabold hover:text-brand-pink transition-colors">Department of Psychology</a> at St. Francis Xavier University in Antigonish, Nova Scotia, where she is cross-appointed to the <a href="https://www.stfx.ca/academics/science/computer-science" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-extrabold hover:text-brand-pink transition-colors">Department of Computer Science</a> and <a href="https://www.stfx.ca/academics/science/biology" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-extrabold hover:text-brand-pink transition-colors">Department of Biology</a>.</p>
+                            <p class="mb-2">Erin holds an adjunct appointment in the <a href="https://www.dal.ca/faculty/science/psychology_neuroscience.html" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-extrabold hover:text-brand-pink transition-colors">Department of Psychology and Neuroscience</a> at Dalhousie University, is an Affiliate Member of <a href="https://www.uvic.ca/socialsciences/psychology/" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-extrabold hover:text-brand-pink transition-colors">Psychology at the University of Victoria</a>, and a Scientific Affiliate (Research) of <a href="https://www.nshealth.ca/" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-extrabold hover:text-brand-pink transition-colors">Nova Scotia Health</a>.</p>
                         </div>
                     </div>
                 </div>
@@ -492,7 +488,7 @@
                         <span class="material-symbols-outlined text-base">group</span>
                         <span>Current Members</span>
                     </button>
-                    <button id="team-tab-former" class="team-tab-btn px-5 py-2.5 rounded-xl font-extrabold text-sm transition-all bg-pink-100 text-brand-darkPink hover:bg-pink-200 flex items-center gap-2">
+                    <button id="team-tab-former" class="team-tab-btn px-5 py-2.5 rounded-xl font-extrabold text-sm transition-all bg-pink-100 text-brand-darkPink hover:bg-pink-200 flex items-center gap-2 hover:text-brand-pink transition-colors">
                         <span class="material-symbols-outlined text-base">history_edu</span>
                         <span>Former Members / Alumni</span>
                     </button>
@@ -551,15 +547,15 @@
                         <span class="material-symbols-outlined text-base">analytics</span>
                         <span>OERs: Statistics</span>
                     </button>
-                    <button id="teach-tab-mri" class="teach-tab-btn px-5 py-2.5 rounded-xl font-extrabold text-sm transition-all bg-pink-100 text-brand-darkPink hover:bg-pink-200 flex items-center gap-2">
+                    <button id="teach-tab-mri" class="teach-tab-btn px-5 py-2.5 rounded-xl font-extrabold text-sm transition-all bg-pink-100 text-brand-darkPink hover:bg-pink-200 flex items-center gap-2 hover:text-brand-pink transition-colors">
                         <span class="material-symbols-outlined text-base">psychology</span>
                         <span>OERs: MRI & Neuroscience</span>
                     </button>
-                    <button id="teach-tab-inclusion" class="teach-tab-btn px-5 py-2.5 rounded-xl font-extrabold text-sm transition-all bg-pink-100 text-brand-darkPink hover:bg-pink-200 flex items-center gap-2">
+                    <button id="teach-tab-inclusion" class="teach-tab-btn px-5 py-2.5 rounded-xl font-extrabold text-sm transition-all bg-pink-100 text-brand-darkPink hover:bg-pink-200 flex items-center gap-2 hover:text-brand-pink transition-colors">
                         <span class="material-symbols-outlined text-base">accessibility_new</span>
                         <span>Inclusion & Accessibility</span>
                     </button>
-                    <button id="teach-tab-outreach" class="teach-tab-btn px-5 py-2.5 rounded-xl font-extrabold text-sm transition-all bg-pink-100 text-brand-darkPink hover:bg-pink-200 flex items-center gap-2">
+                    <button id="teach-tab-outreach" class="teach-tab-btn px-5 py-2.5 rounded-xl font-extrabold text-sm transition-all bg-pink-100 text-brand-darkPink hover:bg-pink-200 flex items-center gap-2 hover:text-brand-pink transition-colors">
                         <span class="material-symbols-outlined text-base">diversity_3</span>
                         <span>STEM Outreach</span>
                     </button>
@@ -573,34 +569,34 @@
                             <li>
                                 <div>
                                     <strong class="text-slate-900 block font-bold">Open Textbook</strong>
-                                    <a href="http://www.erinmazerolle.com/statistics" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-bold hover:underline inline-block mt-0.5">Answering Questions With Data</a>
+                                    <a href="http://www.erinmazerolle.com/statistics" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-bold inline-block mt-0.5 hover:text-brand-pink transition-colors">Answering Questions With Data</a>
                                 </div>
                             </li>
                             <li>
                                 <div>
                                     <strong class="text-slate-900 block font-bold">Lab Manual</strong>
                                     <div class="mt-0.5">
-                                        <a href="http://www.erinmazerolle.com/statisticsLab" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-bold hover:underline">Answering Questions With Data: Lab Manual</a>
-                                        <span class="text-xs text-slate-500 font-normal ml-1">(supported by <a href="https://atlanticoer-relatlantique.ca/" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-semibold hover:underline">AtlanticOER</a>)</span>
+                                        <a href="http://www.erinmazerolle.com/statisticsLab" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-bold hover:text-brand-pink transition-colors">Answering Questions With Data: Lab Manual</a>
+                                        <span class="text-xs text-slate-500 font-normal ml-1">(supported by <a href="https://atlanticoer-relatlantique.ca/" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-semibold hover:text-brand-pink transition-colors">AtlanticOER</a>)</span>
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div>
                                     <strong class="text-slate-900 block font-bold">Syllabus</strong>
-                                    <a href="https://docs.google.com/document/d/1rTEnsBnnhmx-YBd2WWNsU4T1NTxiPIzy/edit?usp=sharing&ouid=111723500312627780592&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-bold hover:underline inline-block mt-0.5">Statistics for Psychology (PSYC 292, StFX)</a>
+                                    <a href="https://docs.google.com/document/d/1rTEnsBnnhmx-YBd2WWNsU4T1NTxiPIzy/edit?usp=sharing&ouid=111723500312627780592&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-bold inline-block mt-0.5 hover:text-brand-pink transition-colors">Statistics for Psychology (PSYC 292, StFX)</a>
                                 </div>
                             </li>
                             <li>
                                 <div>
                                     <strong class="text-slate-900 block font-bold">Syllabus</strong>
-                                    <a href="https://docs.google.com/document/d/1oDcRB63AY0S_5YtwrUS0ckgfcVK6QAAqlMzwjusxQUs/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-bold hover:underline inline-block mt-0.5">Advanced Statistics (PSYC 394, StFX)</a>
+                                    <a href="https://docs.google.com/document/d/1oDcRB63AY0S_5YtwrUS0ckgfcVK6QAAqlMzwjusxQUs/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-bold inline-block mt-0.5 hover:text-brand-pink transition-colors">Advanced Statistics (PSYC 394, StFX)</a>
                                 </div>
                             </li>
                             <li>
                                 <div>
                                     <strong class="text-slate-900 block font-bold">Assignment Collection</strong>
-                                    <a href="https://drive.google.com/drive/folders/1NPmTquE9cDK7Q9Xhgl1e9zSqaOtgcfsh?usp=sharing" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-bold hover:underline inline-block mt-0.5">Collection of assignments for Advanced Statistics, including rubrics</a>
+                                    <a href="https://drive.google.com/drive/folders/1NPmTquE9cDK7Q9Xhgl1e9zSqaOtgcfsh?usp=sharing" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-bold inline-block mt-0.5 hover:text-brand-pink transition-colors">Collection of assignments for Advanced Statistics, including rubrics</a>
                                 </div>
                             </li>
                         </ul>
@@ -615,19 +611,19 @@
                             <li>
                                 <div>
                                     <strong class="text-slate-900 block font-bold">Textbook Adaptation</strong>
-                                    <a href="https://pressbooks.atlanticoer-relatlantique.ca/openneuroscience/" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-bold hover:underline inline-block mt-0.5">Adaptation of the Open Neuroscience Initiative textbook</a>
+                                    <a href="https://pressbooks.atlanticoer-relatlantique.ca/openneuroscience/" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-bold inline-block mt-0.5 hover:text-brand-pink transition-colors">Adaptation of the Open Neuroscience Initiative textbook</a>
                                 </div>
                             </li>
                             <li>
                                 <div>
                                     <strong class="text-slate-900 block font-bold">Syllabus</strong>
-                                    <a href="https://docs.google.com/document/d/1WoLba-OCgFN3Ws5-5fuWGOhgdtPwFDoB/edit?usp=sharing&ouid=111723500312627780592&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-bold hover:underline inline-block mt-0.5">Advanced Topics in Cognitive Neuroscience (PSYC 421, StFX)</a>
+                                    <a href="https://docs.google.com/document/d/1WoLba-OCgFN3Ws5-5fuWGOhgdtPwFDoB/edit?usp=sharing&ouid=111723500312627780592&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-bold inline-block mt-0.5 hover:text-brand-pink transition-colors">Advanced Topics in Cognitive Neuroscience (PSYC 421, StFX)</a>
                                 </div>
                             </li>
                             <li>
                                 <div>
                                     <strong class="text-slate-900 block font-bold">Syllabus</strong>
-                                    <a href="https://docs.google.com/document/d/1oY9mmamnTnmHq2TLiSURa__DE3SJwlT6/edit?usp=sharing&ouid=111723500312627780592&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-bold hover:underline inline-block mt-0.5">Reproducible MRI Research (Directed Studies PSYC 499, StFX)</a>
+                                    <a href="https://docs.google.com/document/d/1oY9mmamnTnmHq2TLiSURa__DE3SJwlT6/edit?usp=sharing&ouid=111723500312627780592&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-bold inline-block mt-0.5 hover:text-brand-pink transition-colors">Reproducible MRI Research (Directed Studies PSYC 499, StFX)</a>
                                 </div>
                             </li>
                         </ul>
@@ -642,7 +638,7 @@
                             <li>
                                 <div>
                                     <strong class="text-slate-900 block font-bold">Accessible Lecture Guide</strong>
-                                    <a href="https://www.youtube.com/watch?v=89zIyuMBQro" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-bold hover:underline inline-block mt-0.5">Turning subtitles on in PowerPoint (YouTube video tutorial)</a>
+                                    <a href="https://www.youtube.com/watch?v=89zIyuMBQro" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-bold inline-block mt-0.5 hover:text-brand-pink transition-colors">Turning subtitles on in PowerPoint (YouTube video tutorial)</a>
                                 </div>
                             </li>
                         </ul>
@@ -660,7 +656,7 @@
                                     <strong class="text-slate-900 block font-bold">Antigonish Brain Bee (2023–2026)</strong>
                                     <div class="mt-0.5">
                                         <span class="text-slate-700">Annual neuroscience competition for students.</span>
-                                        <a href="https://www.instagram.com/antigonishbrainbee" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-bold hover:underline ml-1 inline-flex items-center gap-1">
+                                        <a href="https://www.instagram.com/antigonishbrainbee" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-bold ml-1 inline-flex items-center gap-1 hover:text-brand-pink transition-colors">
                                             <span>Follow us on Instagram!</span>
                                             <span class="material-symbols-outlined text-xs">open_in_new</span>
                                         </a>
@@ -670,7 +666,7 @@
                             <li>
                                 <div>
                                     <strong class="text-slate-900 block font-bold">Coder Dojo Mentor (2015)</strong>
-                                    <a href="https://www.calgarylibrary.ca" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-bold hover:underline inline-block mt-0.5">Calgary Public Library</a>
+                                    <a href="https://www.calgarylibrary.ca" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-bold inline-block mt-0.5 hover:text-brand-pink transition-colors">Calgary Public Library</a>
                                 </div>
                             </li>
                             <li>
@@ -690,7 +686,7 @@
                                     <strong class="text-slate-900 block font-bold">Leader / Mentor (2005–2008)</strong>
                                     <div class="mt-0.5">
                                         <span class="text-slate-700"><em>Industry, Technology and Science (ITS) for Girls!</em> (bimonthly all-girl science & technology adventure club).</span>
-                                        <a href="https://supernova.dal.ca" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-bold hover:underline ml-1">SuperNOVA at Dalhousie University</a>
+                                        <a href="https://supernova.dal.ca" target="_blank" rel="noopener noreferrer" class="text-brand-darkPink font-bold ml-1 hover:text-brand-pink transition-colors">SuperNOVA at Dalhousie University</a>
                                     </div>
                                 </div>
                             </li>
@@ -705,7 +701,7 @@
         {{#if cells.URL}}
         <a href="{{cells.URL}}" target="_blank" rel="noopener noreferrer" class="group bg-white border border-pink-200 p-6 rounded-2xl shadow-sm hover:border-brand-pink hover:shadow-md transition-all block text-left">
             <div class="flex items-center justify-between mb-1">
-                <h3 class="text-lg font-extrabold text-slate-900 group-hover:text-brand-darkPink transition-colors">{{cells.Name}}</h3>
+                <h3 class="text-lg font-extrabold text-slate-900 group-hover:text-brand-darkPink transition-colors hover:text-brand-pink transition-colors">{{cells.Name}}</h3>
                 <span class="material-symbols-outlined text-pink-300 text-sm group-hover:text-brand-pink transition-colors">open_in_new</span>
             </div>
             {{#if cells.Association}}
@@ -794,7 +790,7 @@
                             Supervising StFX honours students in <strong>Psychology, Computer Science, Biology, and Health</strong>.
                         </p>
                         <div class="bg-white p-4 rounded-xl border border-pink-200 mb-6 text-xs text-slate-700 font-medium space-y-1 text-left">
-                            <p class="font-bold text-brand-darkPink">Suggested Prerequisite Courses:</p>
+                            <p class="font-bold text-brand-darkPink hover:text-brand-pink transition-colors">Suggested Prerequisite Courses:</p>
                             <p>• CSCI 161 Introduction to Programming</p>
                             <p>• PHYS 250 Medical Imaging</p>
                             <p>• PSYC 231/232 Brain and Behaviour & PSYC 394 (Advanced Statistics in 3rd year)</p>
@@ -828,7 +824,7 @@
                     <ul class="space-y-2 text-xs text-slate-700 font-medium">
                         <li class="flex items-center gap-2 group">
                             <span class="material-symbols-outlined text-brand-darkPink group-hover:text-brand-pink text-base transition-colors">mail</span>
-                            <a id="cms-footer-email" href="mailto:brainhealthlab@stfx.ca" class="font-bold text-brand-darkPink group-hover:text-brand-pink hover:underline transition-colors">brainhealthlab@stfx.ca</a>
+                            <a id="cms-footer-email" href="mailto:brainhealthlab@stfx.ca" class="font-bold text-brand-darkPink group-hover:text-brand-pink transition-colors">brainhealthlab@stfx.ca</a>
                         </li>
                         <li class="flex items-start gap-2">
                             <span class="material-symbols-outlined text-brand-darkPink hover:text-brand-pink text-base mt-0.5 transition-colors">location_on</span>
@@ -843,7 +839,7 @@
 
                 <!-- Column 2: Connect With Us -->
                 <div class="md:col-span-4 text-left">
-                    <h4 class="text-xs font-extrabold text-brand-darkPink uppercase tracking-wider mb-3">Connect With Us</h4>
+                    <h4 class="text-xs font-extrabold text-brand-darkPink uppercase tracking-wider mb-3 hover:text-brand-pink transition-colors">Connect With Us</h4>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <a id="cms-footer-social-email" href="mailto:brainhealthlab@stfx.ca" aria-label="Email" class="w-9 h-9 rounded-2xl bg-pink-100 text-brand-darkPink hover:bg-brand-pink hover:text-white transition-all flex items-center justify-center border border-pink-200">
                             <i class="fa-solid fa-envelope text-sm"></i>
@@ -863,7 +859,7 @@
 
             <!-- Bottom Return to Top Bar -->
             <div class="flex items-center justify-end pt-2">
-                <a href="#home" class="inline-flex items-center gap-2 bg-pink-50 hover:bg-brand-pink text-brand-darkPink hover:text-white font-extrabold text-xs px-4 py-2.5 rounded-2xl border border-pink-200 shadow-sm transition-all">
+                <a href="#home" class="inline-flex items-center gap-2 bg-pink-50 hover:bg-brand-pink text-brand-darkPink hover:text-white font-extrabold text-xs px-4 py-2.5 rounded-2xl border border-pink-200 shadow-sm transition-all hover:text-brand-pink transition-colors">
                     <span>Back to Top</span>
                     <span class="material-symbols-outlined text-sm">arrow_upward</span>
                 </a>
@@ -1324,7 +1320,7 @@
                             } else {
                                 suppGrid.append(`
                                     <${tag} ${href} class="flex flex-col items-center justify-center h-20 text-center hover:scale-105 transition-transform">
-                                        <span class="text-brand-darkPink font-extrabold text-sm tracking-tight">${supporter.name || ''}</span>
+                                        <span class="text-brand-darkPink font-extrabold text-sm tracking-tight hover:text-brand-pink transition-colors">${supporter.name || ''}</span>
                                     </${tag}>
                                 `);
                             }
