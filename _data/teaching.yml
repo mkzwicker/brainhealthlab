@@ -1,0 +1,5 @@
+teaching_intro: "Courses offered by Dr. Erin Mazerolle in Psychology and Neuroscience."
+courses:
+  - code: "PSYC 230"
+    title: "Brain and Behavior"
+    description: "An introduction to biological psychology."

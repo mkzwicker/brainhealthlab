@@ -7,71 +7,85 @@ media_folder: "media"
 public_folder: "media"
 
 collections:
-  - name: "pages"
-    label: "Site Content Pages"
+  - name: "site_configuration"
+    label: "⚙️ Site Settings & Branding"
     files:
-      - name: "index"
-        label: "Home Page (index.html)"
-        file: "index.html"
-        format: "raw"
+      - file: "_data/configuration.yml"
+        label: "Global Settings"
+        name: "configuration_data"
         fields:
-          - label: "⚙️ Site Settings & Branding"
-            name: "site_branding"
-            widget: "object"
-            fields:
-              - { label: "Lab Title", name: "lab_title", widget: "string", default: "Brain Health Lab" }
-              - { label: "Institution Name", name: "institution", widget: "string", default: "St. Francis Xavier University" }
-              - { label: "General Contact Email", name: "contact_email", widget: "string", default: "brainhealthlab@stfx.ca" }
-              - { label: "Dr. Mazerolle Personal Email", name: "pi_email", widget: "string", default: "emazerol@stfx.ca" }
-              - { label: "Instagram URL", name: "instagram_url", widget: "string", default: "https://www.instagram.com/brainhealthlab_stfx/" }
-              - { label: "GitHub URL", name: "github_url", widget: "string", default: "https://github.com/brainhealthlabstfx" }
+          - { label: "Lab Title", name: "lab_title", widget: "string", default: "Brain Health Lab" }
+          - { label: "Institution Name", name: "institution", widget: "string", default: "St. Francis Xavier University" }
+          - { label: "General Contact Email", name: "contact_email", widget: "string", default: "brainhealthlab@stfx.ca" }
+          - { label: "Dr. Mazerolle Personal Email", name: "pi_email", widget: "string", default: "emazerol@stfx.ca" }
+          - { label: "Instagram URL", name: "instagram_url", widget: "string", default: "https://www.instagram.com/brainhealthlab_stfx/" }
+          - { label: "GitHub URL", name: "github_url", widget: "string", default: "https://github.com/brainhealthlabstfx" }
 
-          - label: "1. Home / Hero Section"
-            name: "hero_section"
-            widget: "object"
-            fields:
-              - { label: "Hero Headline", name: "hero_headline", widget: "string", default: "Advancing Brain Health, Science, & Literacy" }
-              - { label: "Hero Subtitle", name: "hero_subtitle", widget: "text", default: "The Brain Health Lab at St. Francis Xavier University is a research group led by Dr. Erin Mazerolle, investigating brain function, cerebrovascular health, and neuroimaging." }
-              - { label: "Hero Team Note", name: "hero_team_note", widget: "markdown", default: "Our team of collaborators and trainees advance brain science, health, and literacy through diverse perspectives and backgrounds combining education, psychology, health, biology, computer science, chemistry, engineering, physics, neuropsychology, and neurology." }
+  - name: "hero_section"
+    label: "1. Home / Hero Section"
+    files:
+      - file: "_data/hero.yml"
+        label: "Hero Content"
+        name: "hero_data"
+        fields:
+          - { label: "Hero Headline", name: "hero_headline", widget: "string", default: "Advancing Brain Health, Science, & Literacy" }
+          - { label: "Hero Subtitle", name: "hero_subtitle", widget: "text", default: "The Brain Health Lab at St. Francis Xavier University is a research group led by Dr. Erin Mazerolle, investigating brain function, cerebrovascular health, and neuroimaging." }
+          - { label: "Hero Team Note", name: "hero_team_note", widget: "markdown", default: "Our team of collaborators and trainees advance brain science, health, and literacy through diverse perspectives and backgrounds combining education, psychology, health, biology, computer science, chemistry, engineering, physics, neuropsychology, and neurology." }
 
-          - label: "2. About Section (PI Profile)"
-            name: "about_section"
-            widget: "object"
-            fields:
-              - { label: "PI Name", name: "pi_name", widget: "string", default: "Dr. Erin Mazerolle" }
-              - { label: "PI Title", name: "pi_title", widget: "string", default: "Principal Investigator | Assistant Professor" }
-              - { label: "Department", name: "pi_department", widget: "string", default: "Department of Psychology, St. Francis Xavier University" }
-              - { label: "PI Bio", name: "pi_bio", widget: "markdown" }
+  - name: "about_section"
+    label: "2. About Section (PI Profile)"
+    files:
+      - file: "_data/about.yml"
+        label: "PI Profile Content"
+        name: "about_data"
+        fields:
+          - { label: "PI Name", name: "pi_name", widget: "string", default: "Dr. Erin Mazerolle" }
+          - { label: "PI Title", name: "pi_title", widget: "string", default: "Principal Investigator | Assistant Professor" }
+          - { label: "Department", name: "pi_department", widget: "string", default: "Department of Psychology, St. Francis Xavier University" }
+          - { label: "PI Bio", name: "pi_bio", widget: "markdown" }
 
-          - label: "3. News Section Subtitle"
-            name: "news_section"
-            widget: "object"
-            fields:
-              - { label: "Section Subtitle", name: "news_subtitle", widget: "string", default: "Recent updates from our lab and initiatives." }
+  - name: "news_section"
+    label: "3. News Section Subtitle"
+    files:
+      - file: "_data/news.yml"
+        label: "News Subtitle"
+        name: "news_data"
+        fields:
+          - { label: "Section Subtitle", name: "news_subtitle", widget: "string", default: "Recent updates from our lab and initiatives." }
 
-          - label: "4. Teaching Section"
-            name: "teaching_section"
-            widget: "object"
-            fields:
-              - { label: "Teaching Overview", name: "teaching_intro", widget: "markdown" }
-              - { label: "Courses Taught", name: "courses", widget: "list", fields: [
-                  { label: "Course Code", name: "code", widget: "string" },
-                  { label: "Course Name", name: "title", widget: "string" },
-                  { label: "Description", name: "description", widget: "text" }
-                ]}
+  - name: "teaching_section"
+    label: "4. Teaching Section"
+    files:
+      - file: "_data/teaching.yml"
+        label: "Teaching Overview & Courses"
+        name: "teaching_data"
+        fields:
+          - { label: "Teaching Overview", name: "teaching_intro", widget: "markdown" }
+          - { label: "Courses Taught", name: "courses", widget: "list", fields: [
+              { label: "Course Code", name: "code", widget: "string" },
+              { label: "Course Name", name: "title", widget: "string" },
+              { label: "Description", name: "description", widget: "text" }
+            ]}
 
-          - label: "5. Join Us Section"
-            name: "join_us_section"
-            widget: "object"
-            fields:
-              - { label: "Prospective Students Intro", name: "join_intro", widget: "markdown" }
-              - { label: "Current Opportunities", name: "opportunities", widget: "markdown" }
+  - name: "join_us_section"
+    label: "5. Join Us Section"
+    files:
+      - file: "_data/join_us.yml"
+        label: "Student Info & Opportunities"
+        name: "join_us_data"
+        fields:
+          - { label: "Prospective Students Intro", name: "join_intro", widget: "markdown" }
+          - { label: "Current Opportunities", name: "opportunities", widget: "markdown" }
 
-          - label: "📊 Sheetrock Managed Sections"
-            name: "sheetrock_info"
-            widget: "object"
-            fields:
-              - { label: "Google Sheets Note", name: "sheet_note", widget: "string", default: "Team members, Publications, and Partners are dynamically populated from your Google Spreadsheet via Sheetrock.js." }
+  - name: "sheetrock_info_section"
+    label: "📊 Sheetrock Managed Sections"
+    files:
+      - file: "_data/sheetrock_info.yml"
+        label: "Google Sheets Note"
+        name: "sheetrock_data"
+        fields:
+          - { label: "Google Sheets Note", name: "sheet_note", widget: "string", default: "Team members, Publications, and Partners are dynamically populated from your Google Spreadsheet via Sheetrock.js." }
+
 
 
 
