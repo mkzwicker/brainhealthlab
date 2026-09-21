@@ -93,6 +93,21 @@
             outline: 2px solid #D25299;
             outline-offset: 2px;
         }
+
+        /* Style all dynamically generated markdown links that don't have explicit classes, and override Tailwind Typography */
+        a:not([class]), .prose a {
+            color: #942663 !important; /* brand-darkPink */
+            font-weight: 700 !important;
+            text-decoration: underline !important;
+            text-decoration-color: #fbcfe8 !important; /* pink-200 */
+            text-decoration-thickness: 2px !important;
+            text-underline-offset: 4px !important;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        }
+        a:not([class]):hover, .prose a:hover {
+            color: #D25299 !important; /* brand-pink */
+            text-decoration-color: #D25299 !important;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-brand-textDark font-sans antialiased selection:bg-brand-pink selection:text-white min-h-screen text-left">
