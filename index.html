@@ -1266,17 +1266,20 @@
                     suppGrid.empty();
                     if (supp.supporters_list && supp.supporters_list.length > 0) {
                         supp.supporters_list.forEach(supporter => {
+                            const tag = supporter.url ? 'a' : 'div';
+                            const href = supporter.url ? `href="${supporter.url}" target="_blank" rel="noopener noreferrer"` : '';
+                            
                             if (supporter.logo) {
                                 suppGrid.append(`
-                                    <div class="flex items-center justify-center h-20 w-full hover:scale-105 transition-transform">
+                                    <${tag} ${href} class="flex items-center justify-center h-20 w-full hover:scale-105 transition-transform">
                                         <img src="${supporter.logo}" alt="${supporter.name || ''}" class="max-h-20 w-auto object-contain" title="${supporter.name || ''}">
-                                    </div>
+                                    </${tag}>
                                 `);
                             } else {
                                 suppGrid.append(`
-                                    <div class="flex flex-col items-center justify-center h-20 text-center hover:scale-105 transition-transform">
+                                    <${tag} ${href} class="flex flex-col items-center justify-center h-20 text-center hover:scale-105 transition-transform">
                                         <span class="text-brand-darkPink font-extrabold text-sm tracking-tight">${supporter.name || ''}</span>
-                                    </div>
+                                    </${tag}>
                                 `);
                             }
                         });

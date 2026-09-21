@@ -157,6 +157,7 @@ collections:
             fields:
               - { label: "Name", name: "name", widget: "string" }
               - { label: "Logo Image", name: "logo", widget: "image", required: false, hint: "Optional. Upload an image or enter a URL." }
+              - { label: "Website URL", name: "url", widget: "string", required: false, hint: "Optional link when the logo or name is clicked." }
 
   - name: "opportunities"
     label: "Opportunities"
