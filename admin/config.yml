@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: mkzwicker/brainhealthlab
+  branch: main
+
+local_backend: true
+
+media_folder: "media"
+public_folder: "media"
+
+collections:
+  - name: "pages"
+    label: "Site Content Pages"
+    files:
+      - file: "index.html"
+        label: "Home Page Content"
+        name: "index"
+        fields:
+          - { label: "Site Title", name: "title", widget: "string" }
