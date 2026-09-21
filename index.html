@@ -1209,44 +1209,6 @@
                     });
 
                     $('#collaborators-grid').html('').sheetrock({
-            try {
-                if (typeof $.fn.sheetrock === 'function') {
-                    $('#current').html('').sheetrock({
-                        url: teamSpreadsheet,
-                        query: "select C,D,G,H where B='Current' order by A asc",
-                        fetchSize: 50,
-                        rowTemplate: currentTemplate
-                    });
-
-                    $('#former').html('').sheetrock({
-                        url: teamSpreadsheet,
-                        query: "select C,D,G,H where B='Former' order by A asc",
-                        fetchSize: 50,
-                        rowTemplate: formerTemplate
-                    });
-
-                    $('#review').html('').sheetrock({
-                        url: pubSpreadsheet,
-                        query: "select * where B='ReviewArticle'",
-                        fetchSize: 500,
-                        rowTemplate: reviewTemplate
-                    });
-
-                    $('#research').html('').sheetrock({
-                        url: pubSpreadsheet,
-                        query: "select * where B='ResearchArticle'",
-                        fetchSize: 500,
-                        rowTemplate: researchTemplate
-                    });
-
-                    $('#presentations').html('').sheetrock({
-                        url: pubSpreadsheet,
-                        query: "select * where B='ConferencePresentation'",
-                        fetchSize: 500,
-                        rowTemplate: presentationsTemplate
-                    });
-
-                    $('#collaborators-grid').html('').sheetrock({
                         url: collaboratorsSpreadsheet,
                         fetchSize: 500,
                         rowTemplate: collaboratorsTemplate,
