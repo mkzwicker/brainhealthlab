@@ -1,21 +1,21 @@
-section_title: "News"
-news_subtitle: "Recent updates from our lab and initiatives."
+section_title: News
+news_subtitle: Check out recent updates from our lab and initiatives.
 news_items:
-  - category: "Recruitment"
-    date: "June 2025"
-    title: "We're Hiring!"
-    description: "The lab is recruiting new trainees and research staff. Check position requirements and stipend details on our Join Us page."
-    link_text: "Read Join Us page"
-    link_url: "#join-us"
-  - category: "Participate"
-    date: "April 2025"
-    title: "Participate in a Study"
-    description: "Looking for participants aged 20-45 for a brief telephone study of memory and executive function to help identify SuperAgers in CLSA."
-    link_text: "Read Study Details (Qualtrics)"
-    link_url: "https://stfx.qualtrics.com/jfe/form/SV_3jXzr3qXpx1KQaa"
-  - category: "Publication"
-    date: "March 2025"
-    title: "New Publication Out"
-    description: "Check out our latest publication on fMRI cerebrovascular reactivity and brain health literacy."
-    link_text: "View Publications"
-    link_url: "#publications"
+  - category: Recruitment
+    date: June 2025
+    title: We're Hiring!
+    description: The lab is recruiting new trainees and research staff. Check position requirements and stipend details on our Join Us page.
+    link_text: Read Join Us page
+    link_url: '#join-us'
+  - category: Participate
+    date: April 2025
+    title: Participate in a Study
+    description: Looking for participants aged 20-45 for a brief telephone study of memory and executive function to help identify SuperAgers in CLSA.
+    link_text: Read Study Details (Qualtrics)
+    link_url: https://stfx.qualtrics.com/jfe/form/SV_3jXzr3qXpx1KQaa
+  - category: Publication
+    date: March 2025
+    title: New Publication Out
+    description: Check out our latest publication on fMRI cerebrovascular reactivity and brain health literacy.
+    link_text: View Publications
+    link_url: '#publications'
