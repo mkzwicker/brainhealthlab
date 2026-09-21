@@ -1,4 +1,4 @@
-anchor: "partners"
-section_title: "Partners"
-introduction: "Research partners and collaborators across institutions."
-instructions: "To manage Collaborators/Partners, please edit the [Collaborators Spreadsheet](https://docs.google.com/spreadsheets/d/1Y6qGA40KcuQUxagPOT8wLDZxOYE3SUc_qQjr1X_Ir1U/edit#gid=0). Changes will be reflected automatically on the site."
+anchor: partners
+section_title: Partners and Collaborators
+introduction: remove this field
+instructions: To manage Collaborators/Partners, please edit the [Collaborators Spreadsheet](https://docs.google.com/spreadsheets/d/1Y6qGA40KcuQUxagPOT8wLDZxOYE3SUc_qQjr1X_Ir1U/edit#gid=0). Changes will be reflected automatically on the site.
