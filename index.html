@@ -1282,7 +1282,7 @@
                 if (about) {
                     if (about.anchor) $('#about').attr('id', about.anchor);
                     if (about.section_title) $('#cms-about-title').text(about.section_title);
-                    if (about.introduction) $('#cms-about-subtitle').html(marked.parse(about.introduction));
+                    $('#cms-about-subtitle').html(about.introduction ? marked.parse(about.introduction) : '').toggle(!!about.introduction);
                     if (about.pi_bio) $('#cms-pi-bio').html(marked.parse(about.pi_bio));
                 }
 
@@ -1291,7 +1291,7 @@
                 if (news) {
                     if (news.anchor) $('#news').attr('id', news.anchor);
                     if (news.section_title) $('#cms-news-title').text(news.section_title);
-                    if (news.introduction) $('#cms-news-subtitle').html(marked.parse(news.introduction));
+                    $('#cms-news-subtitle').html(news.introduction ? marked.parse(news.introduction) : '').toggle(!!news.introduction);
                 }
                 
                 // Publications
@@ -1299,7 +1299,7 @@
                 if (pub) {
                     if (pub.anchor) $('#publications').attr('id', pub.anchor);
                     if (pub.section_title) $('#cms-publications-title').text(pub.section_title);
-                    if (pub.introduction) $('#cms-publications-intro').html(marked.parse(pub.introduction));
+                    $('#cms-publications-intro').html(pub.introduction ? marked.parse(pub.introduction) : '').toggle(!!pub.introduction);
                 }
                 
                 // Team
@@ -1307,7 +1307,7 @@
                 if (team) {
                     if (team.anchor) $('#team').attr('id', team.anchor);
                     if (team.section_title) $('#cms-team-title').text(team.section_title);
-                    if (team.introduction) $('#cms-team-intro').html(marked.parse(team.introduction));
+                    $('#cms-team-intro').html(team.introduction ? marked.parse(team.introduction) : '').toggle(!!team.introduction);
                 }
                 
                 // Teaching
@@ -1315,7 +1315,7 @@
                 if (teach) {
                     if (teach.anchor) $('#teaching').attr('id', teach.anchor);
                     if (teach.section_title) $('#cms-teaching-title').text(teach.section_title);
-                    if (teach.introduction) $('#cms-teaching-intro').html(marked.parse(teach.introduction));
+                    $('#cms-teaching-intro').html(teach.introduction ? marked.parse(teach.introduction) : '').toggle(!!teach.introduction);
                 }
                 
                 // Partners
@@ -1323,7 +1323,7 @@
                 if (part) {
                     if (part.anchor) $('#partners').attr('id', part.anchor);
                     if (part.section_title) $('#cms-partners-title').text(part.section_title);
-                    if (part.introduction) $('#cms-partners-intro').html(marked.parse(part.introduction));
+                    $('#cms-partners-intro').html(part.introduction ? marked.parse(part.introduction) : '').toggle(!!part.introduction);
                 }
                 
                 // Supporters
@@ -1331,7 +1331,7 @@
                 if (supp) {
                     if (supp.anchor) $('#supporters').attr('id', supp.anchor);
                     if (supp.section_title) $('#cms-supporters-title').text(supp.section_title);
-                    if (supp.introduction) $('#cms-supporters-intro').html(marked.parse(supp.introduction));
+                    $('#cms-supporters-intro').html(supp.introduction ? marked.parse(supp.introduction) : '').toggle(!!supp.introduction);
                 }
                 
                 // Opportunities
@@ -1339,7 +1339,7 @@
                 if (opp) {
                     if (opp.anchor) $('#join-us').attr('id', opp.anchor);
                     if (opp.section_title) $('#cms-opportunities-title').text(opp.section_title);
-                    if (opp.introduction) $('#cms-opportunities-intro').html(marked.parse(opp.introduction));
+                    $('#cms-opportunities-intro').html(opp.introduction ? marked.parse(opp.introduction) : '').toggle(!!opp.introduction);
                 }
 
                 // Footer

@@ -51,7 +51,7 @@ collections:
         fields:
           - { label: "Anchor Name", name: "anchor", widget: "string", hint: "e.g. carousel", required: false }
           - { label: "Title", name: "section_title", widget: "string" }
-          - { label: "Introduction", name: "introduction", widget: "markdown" }
+          - { label: "Introduction", name: "introduction", widget: "markdown", required: false }
 
   - name: "about"
     label: "About"
@@ -62,7 +62,7 @@ collections:
         fields:
           - { label: "Anchor Name", name: "anchor", widget: "string", hint: "e.g. about" }
           - { label: "Title", name: "section_title", widget: "string" }
-          - { label: "Introduction", name: "introduction", widget: "markdown" }
+          - { label: "Introduction", name: "introduction", widget: "markdown", required: false }
           - { label: "PI Bio", name: "pi_bio", widget: "markdown" }
 
   - name: "team"
@@ -74,7 +74,7 @@ collections:
         fields:
           - { label: "Anchor Name", name: "anchor", widget: "string", hint: "e.g. team" }
           - { label: "Title", name: "section_title", widget: "string" }
-          - { label: "Introduction", name: "introduction", widget: "markdown" }
+          - { label: "Introduction", name: "introduction", widget: "markdown", required: false }
           - { label: "Instructions", name: "instructions", widget: "markdown", default: "To manage Team Members, please edit the [Team Spreadsheet](https://docs.google.com/spreadsheets/d/1hYRIFo5c8reL_e77cofdUBV7eoxFB59P_xxUwWgwRAc/edit#gid=0). Changes will be reflected automatically on the site.", required: false }
 
   - name: "publications"
@@ -86,7 +86,7 @@ collections:
         fields:
           - { label: "Anchor Name", name: "anchor", widget: "string", hint: "e.g. publications" }
           - { label: "Title", name: "section_title", widget: "string" }
-          - { label: "Introduction", name: "introduction", widget: "markdown" }
+          - { label: "Introduction", name: "introduction", widget: "markdown", required: false }
           - { label: "Instructions", name: "instructions", widget: "markdown", default: "To manage Publications, please edit the [Publications Spreadsheet](https://docs.google.com/spreadsheets/d/1mkqwHbvnQgFHCbQjc1pUIXd6v9UuJo5_tbm7Fr2PSYk/edit#gid=0). Changes will be reflected automatically on the site.", required: false }
 
   - name: "news"
@@ -98,7 +98,7 @@ collections:
         fields:
           - { label: "Anchor Name", name: "anchor", widget: "string", hint: "e.g. news" }
           - { label: "Title", name: "section_title", widget: "string" }
-          - { label: "Introduction", name: "introduction", widget: "markdown" }
+          - { label: "Introduction", name: "introduction", widget: "markdown", required: false }
 
   - name: "teaching"
     label: "Teaching"
@@ -109,7 +109,7 @@ collections:
         fields:
           - { label: "Anchor Name", name: "anchor", widget: "string", hint: "e.g. teaching" }
           - { label: "Title", name: "section_title", widget: "string" }
-          - { label: "Introduction", name: "introduction", widget: "markdown" }
+          - { label: "Introduction", name: "introduction", widget: "markdown", required: false }
 
   - name: "partners"
     label: "Partners"
@@ -120,7 +120,7 @@ collections:
         fields:
           - { label: "Anchor Name", name: "anchor", widget: "string", hint: "e.g. partners" }
           - { label: "Title", name: "section_title", widget: "string" }
-          - { label: "Introduction", name: "introduction", widget: "markdown" }
+          - { label: "Introduction", name: "introduction", widget: "markdown", required: false }
           - { label: "Instructions", name: "instructions", widget: "markdown", default: "To manage Collaborators/Partners, please edit the [Collaborators Spreadsheet](https://docs.google.com/spreadsheets/d/1Y6qGA40KcuQUxagPOT8wLDZxOYE3SUc_qQjr1X_Ir1U/edit#gid=0). Changes will be reflected automatically on the site.", required: false }
 
   - name: "supporters"
@@ -132,7 +132,7 @@ collections:
         fields:
           - { label: "Anchor Name", name: "anchor", widget: "string", hint: "e.g. supporters" }
           - { label: "Title", name: "section_title", widget: "string" }
-          - { label: "Introduction", name: "introduction", widget: "markdown" }
+          - { label: "Introduction", name: "introduction", widget: "markdown", required: false }
 
   - name: "opportunities"
     label: "Opportunities"
@@ -143,7 +143,7 @@ collections:
         fields:
           - { label: "Anchor Name", name: "anchor", widget: "string", hint: "e.g. join-us" }
           - { label: "Title", name: "section_title", widget: "string" }
-          - { label: "Introduction", name: "introduction", widget: "markdown" }
+          - { label: "Introduction", name: "introduction", widget: "markdown", required: false }
 
   - name: "footer"
     label: "Footer"
