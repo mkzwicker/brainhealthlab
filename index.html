@@ -1148,7 +1148,13 @@
                 marked.use({
                     renderer: {
                         link(href, title, text) {
-                            const isExternal = href && href.startsWith('http');
+                            // Support marked v11+ where first argument is a token object
+                            if (typeof href === 'object') {
+                                text = href.text || '';
+                                title = href.title || '';
+                                href = href.href || '';
+                            }
+                            const isExternal = href && typeof href === 'string' && href.startsWith('http');
                             let out = `<a href="${href}"`;
                             if (title) out += ` title="${title}"`;
                             if (isExternal) out += ` target="_blank" rel="noopener noreferrer"`;
