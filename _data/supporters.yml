@@ -1,3 +1,12 @@
-anchor: supporters
-section_title: Supporters
-introduction: Remove this field
+anchor: "supporters"
+section_title: "Supporters"
+introduction: "Institutional supporters, grants, and funding programs powering our research."
+supporters_list:
+  - name: "NSERC"
+    logo: "https://www.erinmazerolle.com/media/posts/1/NSERC_RGB-2.png"
+  - name: "St. Francis Xavier University"
+    logo: "https://www.erinmazerolle.com/media/posts/1/STFX-VERTICAL-Full-Colour.png"
+  - name: "CIHR / IRSC"
+  - name: "AtlanticOER"
+  - name: "MITACS"
+  - name: "CLARI & StFX SU"

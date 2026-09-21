@@ -282,27 +282,8 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-                <div class="bg-brand-bgLight border border-pink-200 p-8 rounded-2xl shadow-sm hover:shadow-md transition-all">
-                    <h3 class="text-lg md:text-xl font-bold text-slate-900 mb-3">Brain Health Literacy</h3>
-                    <p class="text-base text-slate-600 leading-relaxed font-medium text-left">
-                        Improving brain health literacy through community-engaged research, interactive educational tools, and open access learning materials.
-                    </p>
-                </div>
-
-                <div class="bg-brand-bgLight border border-pink-200 p-8 rounded-2xl shadow-sm hover:shadow-md transition-all">
-                    <h3 class="text-lg md:text-xl font-bold text-slate-900 mb-3">Clinical Translation</h3>
-                    <p class="text-base text-slate-600 leading-relaxed font-medium text-left">
-                        Translating cutting-edge functional brain imaging and vascular biomarker techniques directly into clinical patient care.
-                    </p>
-                </div>
-
-                <div class="bg-brand-bgLight border border-pink-200 p-8 rounded-2xl shadow-sm hover:shadow-md transition-all">
-                    <h3 class="text-lg md:text-xl font-bold text-slate-900 mb-3">Reproducibility</h3>
-                    <p class="text-base text-slate-600 leading-relaxed font-medium text-left">
-                        Improving the reproducibility, open data pipelines, and methodological rigor of functional brain imaging research.
-                    </p>
-                </div>
+            <div id="cms-about-cards" class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                <!-- Research areas hydrated dynamically from CMS -->
             </div>
         </div>
     </section>
@@ -738,36 +719,8 @@
                 <div id="cms-supporters-intro" class="text-base text-slate-600 font-medium">Institutional supporters, grants, and funding programs powering our research.</div>
             </div>
 
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8 items-center justify-items-center py-4">
-                <!-- Supporter 1: NSERC Logo -->
-                <div class="flex items-center justify-center h-20 w-full hover:scale-105 transition-transform">
-                    <img src="https://www.erinmazerolle.com/media/posts/1/NSERC_RGB-2.png" alt="NSERC" class="max-h-16 w-auto object-contain" title="NSERC">
-                </div>
-
-                <!-- Supporter 2: St. Francis Xavier University Logo -->
-                <div class="flex items-center justify-center h-20 w-full hover:scale-105 transition-transform">
-                    <img src="https://www.erinmazerolle.com/media/posts/1/STFX-VERTICAL-Full-Colour.png" alt="St. Francis Xavier University" class="max-h-20 w-auto object-contain" title="St. Francis Xavier University">
-                </div>
-
-                <!-- Supporter 3: CIHR -->
-                <div class="flex flex-col items-center justify-center h-20 text-center hover:scale-105 transition-transform">
-                    <span class="text-brand-darkPink font-extrabold text-sm tracking-tight">CIHR / IRSC</span>
-                </div>
-
-                <!-- Supporter 4: AtlanticOER -->
-                <div class="flex flex-col items-center justify-center h-20 text-center hover:scale-105 transition-transform">
-                    <span class="text-brand-darkPink font-extrabold text-sm tracking-tight">AtlanticOER</span>
-                </div>
-
-                <!-- Supporter 5: MITACS -->
-                <div class="flex flex-col items-center justify-center h-20 text-center hover:scale-105 transition-transform">
-                    <span class="text-brand-darkPink font-extrabold text-sm tracking-tight">MITACS</span>
-                </div>
-
-                <!-- Supporter 6: CLARI & StFX SU -->
-                <div class="flex flex-col items-center justify-center h-20 text-center hover:scale-105 transition-transform">
-                    <span class="text-brand-darkPink font-extrabold text-sm tracking-tight">CLARI & StFX SU</span>
-                </div>
+            <div id="cms-supporters-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8 items-center justify-items-center py-4">
+                <!-- Supporters hydrated dynamically from CMS -->
             </div>
         </div>
     </section>
@@ -1215,6 +1168,21 @@
                     if (about.section_title) $('#cms-about-title').text(about.section_title);
                     $('#cms-about-subtitle').html(about.introduction ? marked.parse(about.introduction) : '').toggle(!!about.introduction);
                     if (about.pi_bio) $('#cms-pi-bio').html(marked.parse(about.pi_bio));
+                    
+                    const aboutCards = $('#cms-about-cards');
+                    aboutCards.empty();
+                    if (about.research_areas && about.research_areas.length > 0) {
+                        about.research_areas.forEach(area => {
+                            aboutCards.append(`
+                                <div class="bg-brand-bgLight border border-pink-200 p-8 rounded-2xl shadow-sm hover:shadow-md transition-all">
+                                    <h3 class="text-lg md:text-xl font-bold text-slate-900 mb-3">${area.title || ''}</h3>
+                                    <div class="text-base text-slate-600 leading-relaxed font-medium text-left prose prose-slate">
+                                        ${area.description ? marked.parse(area.description) : ''}
+                                    </div>
+                                </div>
+                            `);
+                        });
+                    }
                 }
 
                 // News
@@ -1293,6 +1261,26 @@
                     if (supp.anchor) $('#supporters').attr('id', supp.anchor);
                     if (supp.section_title) $('#cms-supporters-title').text(supp.section_title);
                     $('#cms-supporters-intro').html(supp.introduction ? marked.parse(supp.introduction) : '').toggle(!!supp.introduction);
+                    
+                    const suppGrid = $('#cms-supporters-grid');
+                    suppGrid.empty();
+                    if (supp.supporters_list && supp.supporters_list.length > 0) {
+                        supp.supporters_list.forEach(supporter => {
+                            if (supporter.logo) {
+                                suppGrid.append(`
+                                    <div class="flex items-center justify-center h-20 w-full hover:scale-105 transition-transform">
+                                        <img src="${supporter.logo}" alt="${supporter.name || ''}" class="max-h-20 w-auto object-contain" title="${supporter.name || ''}">
+                                    </div>
+                                `);
+                            } else {
+                                suppGrid.append(`
+                                    <div class="flex flex-col items-center justify-center h-20 text-center hover:scale-105 transition-transform">
+                                        <span class="text-brand-darkPink font-extrabold text-sm tracking-tight">${supporter.name || ''}</span>
+                                    </div>
+                                `);
+                            }
+                        });
+                    }
                 }
                 
                 // Opportunities

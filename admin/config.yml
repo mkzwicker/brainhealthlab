@@ -64,6 +64,12 @@ collections:
           - { label: "Title", name: "section_title", widget: "string" }
           - { label: "Introduction", name: "introduction", widget: "markdown", required: false }
           - { label: "PI Bio", name: "pi_bio", widget: "markdown", required: false }
+          - label: "Research Areas"
+            name: "research_areas"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "markdown" }
 
   - name: "team"
     label: "Team"
@@ -145,6 +151,12 @@ collections:
           - { label: "Anchor Name", name: "anchor", widget: "string", hint: "e.g. supporters" }
           - { label: "Title", name: "section_title", widget: "string" }
           - { label: "Introduction", name: "introduction", widget: "markdown", required: false }
+          - label: "Supporters List"
+            name: "supporters_list"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Logo Image", name: "logo", widget: "image", required: false, hint: "Optional. Upload an image or enter a URL." }
 
   - name: "opportunities"
     label: "Opportunities"
