@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth scroll-pt-24">
 
 <head>
     <meta charset="UTF-8">
@@ -877,10 +877,11 @@
                 menuBtn.addEventListener('click', () => {
                     mobileMenu.classList.toggle('hidden');
                 });
-                document.querySelectorAll('.mobile-nav-link').forEach(link => {
-                    link.addEventListener('click', () => {
+                // Use event delegation for dynamically loaded mobile links
+                mobileMenu.addEventListener('click', (e) => {
+                    if (e.target.closest('.mobile-nav-link')) {
                         mobileMenu.classList.add('hidden');
-                    });
+                    }
                 });
             }
 
