@@ -179,15 +179,12 @@
 
     <!-- Hero Section -->
     <section id="home" class="relative pt-32 pb-16 md:pt-44 md:pb-24 bg-gradient-to-b from-brand-bgLight via-pink-50/50 to-slate-50 border-b border-pink-200/60 overflow-hidden">
-        
-        <!-- Brain Watermark Graphic -->
-        <div class="absolute bottom-0 right-[-10%] md:right-[0%] w-[800px] max-w-[80vw] opacity-[0.06] mix-blend-multiply pointer-events-none z-0 hidden sm:block translate-y-[10%]">
-            <img src="https://www.erinmazerolle.com/media/posts/1/responsive/brain-3-2xl.png" alt="Brain Watermark" class="w-full h-auto">
-        </div>
 
         <div class="max-w-7xl mx-auto px-6 relative z-10 text-left">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-7">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+                
+                <!-- Left Half: Text Content -->
+                <div class="lg:col-span-6 pr-0 lg:pr-4">
                     <h1 id="cms-hero-title" class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-6 leading-tight text-left">
                         Interdisciplinary Neuroscience & <span class="bg-gradient-to-r from-brand-darkPink via-brand-pink to-pink-500 bg-clip-text text-transparent">Brain Health Research</span>
                     </h1>
@@ -215,9 +212,16 @@
                     </div>
                 </div>
 
-                <!-- Hero Featured Initiatives Carousel -->
-                <div class="lg:col-span-5">
-                    <div class="bg-white border border-pink-200 p-8 rounded-2xl shadow-md hover:border-brand-pink hover:shadow-lg transition-all relative text-left h-[360px] sm:h-[340px] flex flex-col justify-between overflow-hidden" aria-roledescription="carousel" aria-label="Featured Lab Initiatives">
+                <!-- Right Half: Brain Background + Carousel -->
+                <div class="lg:col-span-6 relative flex items-center justify-center mt-12 lg:mt-0">
+                    
+                    <!-- Brain Background Overlay -->
+                    <div class="absolute inset-0 z-0 flex items-center justify-center pointer-events-none opacity-[0.15] mix-blend-multiply scale-[1.3] translate-x-[5%]">
+                        <img src="https://www.erinmazerolle.com/media/posts/1/responsive/brain-3-2xl.png" alt="Brain Graphic" class="w-full h-auto object-contain">
+                    </div>
+
+                    <!-- Hero Featured Initiatives Carousel -->
+                    <div class="w-full max-w-xl bg-white border border-pink-200 p-8 rounded-2xl shadow-xl hover:border-brand-pink hover:shadow-2xl transition-all relative z-10 text-left h-[360px] sm:h-[340px] flex flex-col justify-between overflow-hidden" aria-roledescription="carousel" aria-label="Featured Lab Initiatives">
                         <!-- Top Gradient Accent Banner (Enhancement 3) -->
                         <div class="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-brand-pink via-pink-400 to-brand-darkPink"></div>
 
