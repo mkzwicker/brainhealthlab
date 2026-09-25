@@ -1226,7 +1226,7 @@
                 const hero = await fetchCmsYaml('home_banner.yml');
                 if (hero) {
                     if (hero.headline_text || hero.headline_accent) {
-                        $('#cms-hero-title').html((hero.headline_text || '') + ' <span class="bg-gradient-to-r from-brand-darkPink via-brand-pink to-pink-500 bg-clip-text text-transparent">' + (hero.headline_accent || '') + '</span>');
+                        $('#cms-hero-title').html((hero.headline_text || '').trim() + '<br><span class="bg-gradient-to-r from-brand-darkPink via-brand-pink to-pink-500 bg-clip-text text-transparent whitespace-nowrap">' + (hero.headline_accent || '') + '</span>');
                     }
                     if (hero.subtitle_p1) $('#cms-hero-sub1').html(marked.parse(hero.subtitle_p1));
                     if (hero.subtitle_p2) $('#cms-hero-sub2').html(marked.parse(hero.subtitle_p2));
