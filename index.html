@@ -185,9 +185,9 @@
                 
                 <!-- Left Half: Text Content -->
                 <div class="lg:col-span-6 pr-0 lg:pr-4">
-                    <h1 id="cms-hero-title" class="text-3xl md:text-4xl lg:text-[2.5rem] font-extrabold text-slate-900 tracking-tight mb-6 leading-tight text-left">
-                        Interdisciplinary Neuroscience &<br>
-                        <span class="bg-gradient-to-r from-brand-darkPink via-brand-pink to-pink-500 bg-clip-text text-transparent whitespace-nowrap">Brain Health Research</span>
+                    <h1 id="cms-hero-title" class="font-extrabold text-slate-900 tracking-tight mb-4 leading-none text-left" style="container-type: inline-size;">
+                        <span class="block whitespace-nowrap" style="font-size: clamp(1.2rem, 6.2cqi, 4rem);">Interdisciplinary Neuroscience &</span>
+                        <span class="block bg-gradient-to-r from-brand-darkPink via-brand-pink to-pink-500 bg-clip-text text-transparent whitespace-nowrap mt-1" style="font-size: clamp(1.2rem, 9.3cqi, 6rem);">Brain Health Research</span>
                     </h1>
                     
                     <div id="cms-hero-sub1" class="text-base md:text-lg text-slate-700 max-w-2xl mb-4 leading-relaxed font-medium text-left">
@@ -1226,7 +1226,7 @@
                 const hero = await fetchCmsYaml('home_banner.yml');
                 if (hero) {
                     if (hero.headline_text || hero.headline_accent) {
-                        $('#cms-hero-title').html((hero.headline_text || '').trim() + '<br><span class="bg-gradient-to-r from-brand-darkPink via-brand-pink to-pink-500 bg-clip-text text-transparent whitespace-nowrap">' + (hero.headline_accent || '') + '</span>');
+                        $('#cms-hero-title').html('<span class="block whitespace-nowrap" style="font-size: clamp(1.2rem, 6.2cqi, 4rem);">' + (hero.headline_text || '').trim() + '</span><span class="block bg-gradient-to-r from-brand-darkPink via-brand-pink to-pink-500 bg-clip-text text-transparent whitespace-nowrap mt-1" style="font-size: clamp(1.2rem, 9.3cqi, 6rem);">' + (hero.headline_accent || '') + '</span>');
                     }
                     if (hero.subtitle_p1) $('#cms-hero-sub1').html(marked.parse(hero.subtitle_p1));
                     if (hero.subtitle_p2) $('#cms-hero-sub2').html(marked.parse(hero.subtitle_p2));
